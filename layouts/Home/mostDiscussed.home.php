@@ -1,6 +1,6 @@
 <?php
 require_once(ROOT_PATH . '/../../connection.php');
-$stmt = $connection->prepare("SELECT * FROM mostdiscussed INNER JOIN allblogs ON mostdiscussed.postID = allblogs.postID INNER JOIN category ON category.id = allblogs.categoryID LIMIT :limitNumber");
+$stmt = $connection->prepare("SELECT * FROM allblogs INNER JOIN category ON category.id = allblogs.categoryID INNER JOIN postviews ON postviews.postID = allblogs.postID ORDER BY postviews.viewCount DESC LIMIT :limitNumber");
 $stmt->bindValue(":limitNumber", 1, PDO::PARAM_INT);
 $stmt->execute();
 ?>
@@ -30,7 +30,7 @@ for ($mostUpdatedPostRow = 0; $mostUpdatedPostRow < $stmt->rowCount(); $mostUpda
                     </span>
                     <span class="meta-item comment">
                         <i class="fal fa-eye"></i>
-                        13
+                        <?php echo $mostUpdatedPostData['viewCount'] ?>
                     </span>
                 </div>
                 <a href="blog-list.php" class="button post-button">
@@ -44,3 +44,4 @@ for ($mostUpdatedPostRow = 0; $mostUpdatedPostRow < $stmt->rowCount(); $mostUpda
 <?php
 };
 ?>
+

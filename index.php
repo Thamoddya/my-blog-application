@@ -131,9 +131,9 @@ $PageName = "Blog Home ";
             </div>
             <div class="row gy-5">
                 <div class="col-lg-9 left-content">
-                
+
                     <?php
-                        include_once "./layouts/Home/mostDiscussed.home.php";
+                    include_once "./layouts/Home/mostDiscussed.home.php";
                     ?>
 
                 </div>
@@ -141,71 +141,28 @@ $PageName = "Blog Home ";
                     <div class="sidebar-widget">
                         <div class="gradient-bar mb-30"></div>
                         <!-- Cat item -->
-                        <div class="widget-category">
-                            <div class="cat-thumb bg-cover" style="background-image: url('assets/img/blog/recent-post-sm1.png')"></div>
-                            <div class="cat-content">
-                                <a href="blog-list.php">
-                                    <h4 class="cat-title">How to Make Every Trip the Best Trip Ever</h4>
-                                </a>
-                                <div class="cat-meta">
-                                    <span class="post-date meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item comment">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Cat item -->
-                        <div class="widget-category">
-                            <div class="cat-thumb bg-cover" style="background-image: url('assets/img/blog/recent-post-sm2.png')"></div>
-                            <div class="cat-content">
-                                <a href="blog-list.php">
-                                    <h4 class="cat-title">Mental Shoot Tips to Cope With the End of Summer</h4>
-                                </a>
-                                <div class="cat-meta">
-                                    <span class="post-date meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item comment">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Cat item -->
-                        <div class="widget-category">
-                            <div class="cat-thumb bg-cover" style="background-image: url('assets/img/blog/recent-post-sm3.png')"></div>
-                            <div class="cat-content">
-                                <a href="blog-list.php">
-                                    <h4 class="cat-title">The Beautiful French Village Of Saint-Emilion</h4>
-                                </a>
-                                <div class="cat-meta">
-                                    <span class="post-date meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item comment">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+
+                        <?php
+                        include_once "./layouts/Home/engagedPostpreviewPost.home.php";
+                        ?>
                         <!-- WIDGET SOCIAL PROFILE -->
                         <div class="widget-social-profile">
-                            <h3 class="heading-secondary">Follow us</h3>
-                            <p class="body-text">You can find us here</p>
+                            <h3 class="heading-secondary">Contact Me</h3>
+                            <p class="body-text">You Can Find Me Here</p>
                             <div class="social-items">
-                                <a href="#" class="social-link">
+                                <a href="https://web.facebook.com/Thamoddya" class="social-link">
                                     <span class="icon">
                                         <i class="fab fa-facebook-f"></i>
                                     </span>
                                 </a>
-                                <a href="#" class="social-link">
+                                <a href="https://www.linkedin.com/in/thamoddya-rashmitha/" class="social-link">
                                     <span class="icon">
                                         <i class="fab fa-linkedin-in"></i>
                                     </span>
                                 </a>
-                                <a href="#" class="social-link">
+                                <a href="https://wa.me/0769458554" class="social-link">
                                     <span class="icon">
-                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-whatsapp"></i>
                                     </span>
                                 </a>
                             </div>
