@@ -1,7 +1,7 @@
 <?php
 require_once(ROOT_PATH . '/../../connection.php');
 $stmt = $connection->prepare("SELECT * FROM category LIMIT :limitNumber");
-$stmt->bindValue(":limitNumber", 5, PDO::PARAM_INT);
+$stmt->bindValue(":limitNumber", 4, PDO::PARAM_INT);
 $stmt->execute();
 ?>
 
