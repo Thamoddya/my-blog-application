@@ -229,7 +229,7 @@ $PageName = "Blog Home ";
                 <div class="col-lg-9">
                     <div class="row gy-4 main-post-card-wrapper">
                         <?php
-                            include_once "./layouts/Home/recentFourItemArea.home.php";
+                        include_once "./layouts/Home/recentFourItemArea.home.php";
                         ?>
                     </div>
                 </div>
