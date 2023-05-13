@@ -31,7 +31,6 @@ $PageName = "Blog Home ";
     ?>
 
 
-
     <!-- ============= FEATURED TOPICS ============= -->
     <section class="featured-topics-wrapper section-padding">
         <div class="container">
@@ -58,13 +57,13 @@ $PageName = "Blog Home ";
                             <div class="gradient-bar mb-30"></div>
                             <h3 class="heading-tertiary mb-20">Categories</h3>
 
-                        <?php
-    require_once "./layouts/Home/Categories.home.php";
-                        ?>
+                            <?php
+                            require_once "./layouts/Home/Categories.home.php";
+                            ?>
 
                             <div class="widget-ad-banner two bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.gif')">
                                 <div class="content">
-                                    <a href="#" class="button icon-button active">
+                                    <a href="https://thamo.ga/" class="button icon-button active ">
                                         <span>
                                             <i class="fas fa-chevron-right"></i>
                                         </span>
@@ -82,16 +81,11 @@ $PageName = "Blog Home ";
     <div class="container mt-2">
         <div class="ad-campaign bg-cover" style="background-image: url('assets/img/add-campaign-1.png')">
             <div class="content-left">
-                <span class="discount">20% off</span>
-                <h3 class="heading-primary mt-10">Home Furniture</h3>
+                <span class="discount">Knowladge Addict</span>
             </div>
             <div class="content-right">
-                <h4>Best quality ever!</h4>
-                <div class="content">
-                    <p class="body-text">
-                        Magna incididunt commodo aute cupidatat duis eiusmo magna elit aliqua nulla incididunt ex.
-                    </p>
-                    <a href="#" class="button icon-button active">
+                <div class="content offset-lg-4 d-none d-lg-flex">
+                    <a href="#" class="button icon-button active ">
                         <span class="icon">
                             <i class="fas fa-chevron-right"></i>
                         </span>
@@ -116,62 +110,9 @@ $PageName = "Blog Home ";
         </div>
         <div class="container-fluid">
             <div class="row gy-3">
-                <div class="col-lg-5">
-                    <div class="trending-card bg-cover" style="background-image: url('assets/img/blog/trending-post1.png')">
-                        <div class="card-content">
-                            <span class="category"> Creative </span>
-                            <a href="blog-list.php">
-                                <h3 class="heading-primary">
-                                    Stock futures are flat ahead of Fed’s Jackson Hole symposium
-                                </h3>
-                            </a>
-
-                            <a href="blog-list.php" class="author"> by Roxanne Mac</a>
-
-                            <a href="blog-list.php" class="button icon-button">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trending-card bg-cover" style="background-image: url('assets/img/blog/trending-post2.png')">
-                        <div class="card-content">
-                            <span class="category"> Digital </span>
-                            <a href="blog-list.php">
-                                <h3 class="heading-primary">top 10 spring destinations to visit this year</h3>
-                            </a>
-
-                            <a href="blog-list.php" class="author"> Jillian Kinney </a>
-
-                            <a href="blog-list.php" class="button icon-button">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="trending-card bg-cover" style="background-image: url('assets/img/blog/trending-post1.png')">
-                        <div class="card-content">
-                            <span class="category"> Innovation </span>
-                            <a href="blog-list.php">
-                                <h3 class="heading-primary">How to Avoid the Comparison Game</h3>
-                            </a>
-
-                            <a href="blog-list.php" class="author"> by Nojus Paul</a>
-
-                            <a href="blog-list.php" class="button icon-button">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include_once "./layouts/Home/trending.home.php";
+                ?>
             </div>
         </div>
     </section>
