@@ -212,52 +212,13 @@ $PageName = "Blog Home ";
                 <div class="col-lg-3 sidebar">
                     <div class="gradient-bar"></div>
 
-
-                    <div class="recent-post-card">
-                        <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb1.png')"></div>
-                        <div class="card-content">
-                            <div class="post-meta">
-                                <span class="meta-item"> Design </span>
-                                <span class="meta-item"> Feb 06, 2022 </span>
-                                <span class="meta-item">
-                                    <i class="fal fa-comment"></i>
-                                    13
-                                </span>
-                            </div>
-                            <a href="blog-list.php">
-                                <h3 class="heading-secondary">
-                                    Animated Cartoon Is The New Future Of Entertainment
-                                </h3>
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="recent-post-card">
-                        <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb2.png')"></div>
-                        <div class="card-content">
-                            <div class="post-meta">
-                                <span class="meta-item"> Food </span>
-                                <span class="meta-item"> Feb 06, 2022 </span>
-                                <span class="meta-item">
-                                    <i class="fal fa-comment"></i>
-                                    13
-                                </span>
-                            </div>
-                            <a href="blog-list.php">
-                                <h3 class="heading-secondary">The Beautiful French Village Of Saint-Emilion</h3>
-                            </a>
-                        </div>
-                    </div>
-
-
+                    <?php
+                    include_once "./layouts/Home/recentPost1.home.php";
+                    ?>
                     <!-- Ad banner -->
-                    <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/recent-post/add-banner2.png')">
+                    <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.gif')">
                         <div class="content">
-                            <span class="discount">20% off</span>
-                            <h2 class="heading-primary">Jewelry IWO</h2>
-                            <p class="body-text">Magna incididunt commodo aute consectetur cupida.</p>
-                            <a href="#" class="button icon-button active">
+                            <a href="https://thamo.ga/" class="button icon-button active ">
                                 <span>
                                     <i class="fas fa-chevron-right"></i>
                                 </span>
@@ -267,131 +228,9 @@ $PageName = "Blog Home ";
                 </div>
                 <div class="col-lg-9">
                     <div class="row gy-4 main-post-card-wrapper">
-                        <div class="col-md-6">
-                            <!-- Post item -->
-                            <div class="main-post-card">
-                                <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb3.png')"></div>
-                                <span class="category">Careers</span>
-                                <div class="card-content">
-
-                                    <div class="card-meta">
-                                        <div class="meta-item post-author">
-                                            <div class="author-avatar bg-cover" style="
-                                                        background-image: url('assets/img/recent-post/post-author1.png');
-                                                    "></div>
-                                            <a href="blog-list.php" class="author-name">Terence Whittle</a>
-                                        </div>
-                                        <span class="meta-item"> Feb 06, 2022 </span>
-                                        <span class="meta-item">
-                                            <i class="fal fa-share-alt"></i>
-                                        </span>
-                                    </div>
-                                    <a href="blog-list.php">
-                                        <h3 class="heading-tertiary">
-                                            How digital transformation enables broader sustainability performance
-                                        </h3>
-                                    </a>
-                                    <a href="blog-list.php" class="button">
-                                        <span>
-                                            <img src="assets/img/icons/long-arrow.png" alt="arrow" />
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <!-- Post item -->
-                            <div class="main-post-card">
-                                <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb4.png')"></div>
-                                <span class="category">Lifestyle</span>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <div class="meta-item post-author">
-                                            <div class="author-avatar bg-cover" style="
-                                                        background-image: url('assets/img/recent-post/post-author1.png');
-                                                    "></div>
-                                            <a href="blog-list.php" class="author-name">Roscoe Gaines</a>
-                                        </div>
-                                        <span class="meta-item"> Feb 06, 2022 </span>
-                                        <span class="meta-item">
-                                            <i class="fal fa-share-alt"></i>
-                                        </span>
-                                    </div>
-                                    <a href="blog-list.php">
-                                        <h3 class="heading-tertiary">
-                                            We can all contribute to safer, greener and healthier city streets
-                                        </h3>
-                                    </a>
-                                    <a href="blog-list.php" class="button">
-                                        <span>
-                                            <img src="assets/img/icons/long-arrow.png" alt="arrow" />
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <!-- Post item -->
-                            <div class="main-post-card">
-                                <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb5.png')"></div>
-                                <span class="category">Lifestyle</span>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <div class="meta-item post-author">
-                                            <div class="author-avatar bg-cover" style="
-                                                        background-image: url('assets/img/recent-post/post-author1.png');
-                                                    "></div>
-                                            <a href="blog-list.php" class="author-name">Shakeel Chandler</a>
-                                        </div>
-                                        <span class="meta-item"> Feb 06, 2022 </span>
-                                        <span class="meta-item">
-                                            <i class="fal fa-share-alt"></i>
-                                        </span>
-                                    </div>
-                                    <a href="blog-list.php">
-                                        <h3 class="heading-tertiary">
-                                            Top 10 Hipster things to do in Canggu where you can chill & party
-                                        </h3>
-                                    </a>
-                                    <a href="blog-list.php" class="button">
-                                        <span>
-                                            <img src="assets/img/icons/long-arrow.png" alt="arrow" />
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <!-- Post item -->
-                            <div class="main-post-card">
-                                <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb6.png')"></div>
-                                <span class="category">Lifestyle</span>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <div class="meta-item post-author">
-                                            <div class="author-avatar bg-cover" style="
-                                                        background-image: url('assets/img/recent-post/post-author1.png');
-                                                    "></div>
-                                            <a href="blog-list.php" class="author-name">Indigo Russo</a>
-                                        </div>
-                                        <span class="meta-item"> Feb 06, 2022 </span>
-                                        <span class="meta-item">
-                                            <i class="fal fa-share-alt"></i>
-                                        </span>
-                                    </div>
-                                    <a href="blog-list.php">
-                                        <h3 class="heading-tertiary">
-                                            Asean Aims for 23 Pct Renewables in Energy Mix by 2025
-                                        </h3>
-                                    </a>
-                                    <a href="blog-list.php" class="button">
-                                        <span>
-                                            <img src="assets/img/icons/long-arrow.png" alt="arrow" />
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                            include_once "./layouts/Home/recentFourItemArea.home.php";
+                        ?>
                     </div>
                 </div>
             </div>

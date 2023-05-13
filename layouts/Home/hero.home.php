@@ -3,7 +3,7 @@
 define('ROOT_PATH', realpath(dirname(__FILE__)));
 require_once(ROOT_PATH . '/../../connection.php');
 // $connection = new PDO("mysql:host=localhost;dbname=myblog", "root", "1234");
-$stmt = $connection->prepare("SELECT * FROM homeheaderpost LIMIT :limitNumber");
+$stmt = $connection->prepare("SELECT * FROM homeheaderpost INNER JOIN postviews ON postviews.postID = homeheaderpost.postID LIMIT :limitNumber");
 $stmt->bindValue(":limitNumber", 3, PDO::PARAM_INT);
 $stmt->execute();
 ?>
@@ -36,7 +36,7 @@ $stmt->execute();
                                         </span>
                                         <span class="meta-item comment">
                                             <i class="fal fa-eye"></i>
-                                            13
+                                            <?php echo $gotDataForheader['viewCount'] ?>
                                         </span>
                                     </div>
                                     <a href="single-post.php?postID=<?php echo $gotDataForheader['postID'] ?>" class="button post-button">
