@@ -34,10 +34,10 @@ $stmt->execute();
 
                                             ?>
                                         </span>
-                                        <!-- <span class="meta-item comment">
-                                            <i class="fal fa-comment"></i>
+                                        <span class="meta-item comment">
+                                            <i class="fal fa-eye"></i>
                                             13
-                                        </span> -->
+                                        </span>
                                     </div>
                                     <a href="single-post.php?postID=<?php echo $gotDataForheader['postID'] ?>" class="button post-button">
                                         <span class="icon">

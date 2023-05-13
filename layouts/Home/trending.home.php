@@ -17,7 +17,7 @@ for ($TrendingDataRows = 0; $TrendingDataRows < $stmt->rowCount(); $TrendingData
                 <span class="category"> <?php echo $TrendingData['tagName'] ?> </span>
                 <a href="blog-list.php">
                     <h3 class="heading-primary">
-                    <?php echo $TrendingData['postTitle'] ?>
+                        <?php echo $TrendingData['postTitle'] ?>
                     </h3>
                 </a>
 

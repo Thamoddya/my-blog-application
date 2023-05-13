@@ -121,7 +121,7 @@ $PageName = "Blog Home ";
     <section class="discussed-post-wrapper section-padding">
         <div class="container">
             <div class="section-head">
-                <h2 class="heading-primary">Most discussed post</h2>
+                <h2 class="heading-primary">Most Engaged Post</h2>
                 <a href="blog-list.php" class="button button-minimal">
                     View all
                     <span class="icon">
@@ -131,32 +131,11 @@ $PageName = "Blog Home ";
             </div>
             <div class="row gy-5">
                 <div class="col-lg-9 left-content">
-                    <div class="discussed-post bg-cover" style="background-image: url('assets/img/blog/discussed-post-bg.png')">
-                        <div class="post-card">
-                            <span class="category"> Lifestyle </span>
-                            <a href="blog-list.php">
-                                <h3 class="heading-secondary">
-                                    Backpacking Essentials for a <br />
-                                    Weekend Hiking Trip
-                                </h3>
-                            </a>
-                            <div class="post-meta-wrapper">
-                                <div class="meta-left">
-                                    <p class="author meta-item">by <span>Julius Kenny</span></p>
-                                    <span class="post-date meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item comment">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                </div>
-                                <a href="blog-list.php" class="button post-button">
-                                    <span class="icon">
-                                        <img src="assets/img/icons/long-arrow.png" alt="arrow" />
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                
+                    <?php
+                        include_once "./layouts/Home/mostDiscussed.home.php";
+                    ?>
+
                 </div>
                 <div class="col-lg-3">
                     <div class="sidebar-widget">
