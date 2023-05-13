@@ -50,35 +50,6 @@ $PageName = "Blog Home ";
                 <?php
                     include_once "./layouts/Home/lastestTopics.home.php";
                 ?>
-                    <!-- CARD ITEM -->
-                    
-                    <!-- CARD ITEM -->
-                    <div class="featured-topics-card">
-                        <div class="card-thumb bg-cover" style="background-image: url('assets/img/blog/featured-topic-2.png')"></div>
-                        <span class="topic-category">Food</span>
-                        <div class="card-content">
-                            <a href="blog-list.php">
-                                <h3 class="heading-secondary">top 10 spring destinations to visit this year</h3>
-                            </a>
-                            <p class="body-text">
-                                A breakdown or a flat tire can happen to anyone at any time, and what you have in
-                                your car can make the difference between getting back on the ...
-                            </p>
-
-                            <div class="post-meta">
-                                <p class="author">by <span>Ruth Leon</span></p>
-                                <span class="post-date"> Feb 06, 2022 </span>
-                            </div>
-                            <a href="blog-list.php" class="button icon-button">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-
-
-
                     
                 </div>
                 <div class="col-lg-3">

@@ -24,17 +24,14 @@ $stmt->execute();
                             <div class="post-card">
                                 <span class="category"> <?php echo $gotDataForheader['tagName'] ?> </span>
                                 <p class="body-text">
-                                    <?php echo $gotDataForheader['displayData'] ?>...
+                                    <?php echo $gotDataForheader['displayData'] ?>
                                 </p>
                                 <div class="post-meta-wrapper">
                                     <div class="meta-left">
                                         <p class="author meta-item">by <span><?php echo $gotDataForheader['Author'] ?></span></p>
                                         <span class="post-date meta-item">
                                             <?php
-                                            $datetime_str = $gotDataForheader['addedTime'];
-                                            $datetime = DateTime::createFromFormat('Y-m-d H:i:s', $datetime_str);
-                                            $formatted_datetime = $datetime->format('M d, Y');
-                                            echo $formatted_datetime;
+
                                             ?>
                                         </span>
                                         <!-- <span class="meta-item comment">
