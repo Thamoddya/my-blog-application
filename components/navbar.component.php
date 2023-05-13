@@ -17,6 +17,7 @@
                         <li class="navmenu-item"><a href="index.php" class="navmenu-link">Education</a></li>
                         <li class="navmenu-item"><a href="index.php" class="navmenu-link">Home</a></li>
                         <li class="navmenu-item"><a href="blog-list.php" class="navmenu-link">Latest</a></li>
+                        <li class="navmenu-item"><a href="contact.php" class="navmenu-link">Contact Me</a></li>
                         <li class="navmenu-item">
                             <span class="gradient-bar small"></span>
                         </li>
@@ -50,6 +51,7 @@
                                 <li><a href="index.php">Technology</a></li>
                                 <li><a href="index.php">Education</a></li>
                                 <li><a href="index.php">Latest</a></li>
+                                <li><a href="contact.php">Contact</a></li>
                             </ul>
                             <a href="contact.php" class="button button-primary mt-20 ml-20 d-inline-block">Contact Us
                                 <i class="fas fa-paper-plane"></i>

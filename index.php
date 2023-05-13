@@ -175,18 +175,13 @@ $PageName = "Blog Home ";
 
     <!-- ============= AD CAMPAIGN ============= -->
     <div class="container mt-1">
-        <div class="ad-campaign bg-cover" style="background-image: url('assets/img/add-campaign-2.png')">
+        <div class="ad-campaign bg-cover" style="background-image: url('assets/img/add-campaign-1.png')">
             <div class="content-left">
-                <span class="discount">20% off</span>
-                <h3 class="heading-primary mt-10">Home Furniture</h3>
+                <span class="discount">Knowladge Addict</span>
             </div>
             <div class="content-right">
-                <h4>Best quality ever!</h4>
-                <div class="content">
-                    <p class="body-text">
-                        Magna incididunt commodo aute cupidatat duis eiusmo magna elit aliqua nulla incididunt ex.
-                    </p>
-                    <a href="#" class="button icon-button active">
+                <div class="content offset-lg-4 d-none d-lg-flex">
+                    <a href="#" class="button icon-button active ">
                         <span class="icon">
                             <i class="fas fa-chevron-right"></i>
                         </span>

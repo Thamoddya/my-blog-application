@@ -2,7 +2,6 @@
 
 define('ROOT_PATH', realpath(dirname(__FILE__)));
 require_once(ROOT_PATH . '/../../connection.php');
-// $connection = new PDO("mysql:host=localhost;dbname=myblog", "root", "1234");
 $stmt = $connection->prepare("SELECT * FROM homeheaderpost INNER JOIN postviews ON postviews.postID = homeheaderpost.postID LIMIT :limitNumber");
 $stmt->bindValue(":limitNumber", 3, PDO::PARAM_INT);
 $stmt->execute();
