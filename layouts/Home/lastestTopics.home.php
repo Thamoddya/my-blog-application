@@ -18,7 +18,7 @@ for ($latesyTopicRows = 0; $latesyTopicRows < $stmt->rowCount(); $latesyTopicRow
                 <h3 class="heading-secondary"><?php echo $latesyTopicData['postTitle'] ?></h3>
             </a>
             <p class="body-text">
-                <?php echo $latesyTopicData['displayData'] ?>
+                <?php echo $latesyTopicData['displayData'] ?>...
             </p>
 
             <div class="post-meta">

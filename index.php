@@ -47,10 +47,10 @@ $PageName = "Blog Home ";
             <div class="row gy-5">
                 <div class="col-lg-9 left-content">
 
-                <?php
+                    <?php
                     include_once "./layouts/Home/lastestTopics.home.php";
-                ?>
-                    
+                    ?>
+
                 </div>
                 <div class="col-lg-3">
                     <div class="featured-topic-slidebar">
@@ -58,88 +58,24 @@ $PageName = "Blog Home ";
                             <div class="gradient-bar mb-30"></div>
                             <h3 class="heading-tertiary mb-20">Categories</h3>
 
-                            <!-- Categories item -->
-                            <a href="blog-list.php" class="cat-item-link">
-                                <div class="cat-item">
-                                    <div class="cat-thumb" style="background-image: url('assets/img/blog/cat-1.png')">
-                                    </div>
-                                    <p class="cat-name">
-                                        Home & garden
-                                        <span>(15)</span>
-                                    </p>
-                                    <div class="button cat-button">
+                        <?php
+    require_once "./layouts/Home/Categories.home.php";
+                        ?>
+
+                            <div class="widget-ad-banner two bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.gif')">
+                                <div class="content">
+                                    <a href="#" class="button icon-button active">
                                         <span>
-                                            <i class="fal fa-chevron-right"></i>
+                                            <i class="fas fa-chevron-right"></i>
                                         </span>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <!-- Categories item -->
-                            <a href="blog-list.php" class="cat-item-link">
-                                <div class="cat-item">
-                                    <div class="cat-thumb" style="background-image: url('assets/img/blog/cat-2.png')">
-                                    </div>
-                                    <p class="cat-name">
-                                        Lifestyle
-                                        <span>(15)</span>
-                                    </p>
-                                    <div class="button cat-button">
-                                        <span>
-                                            <i class="fal fa-chevron-right"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Categories item -->
-                            <a href="blog-list.php" class="cat-item-link">
-                                <div class="cat-item">
-                                    <div class="cat-thumb" style="background-image: url('assets/img/blog/cat-3.png')">
-                                    </div>
-                                    <p class="cat-name">
-                                        Technology
-                                        <span>(15)</span>
-                                    </p>
-                                    <div class="button cat-button">
-                                        <span>
-                                            <i class="fal fa-chevron-right"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Categories item -->
-                            <a href="blog-list.php" class="cat-item-link">
-                                <div class="cat-item">
-                                    <div class="cat-thumb" style="background-image: url('assets/img/blog/cat-4.png')">
-                                    </div>
-                                    <p class="cat-name">
-                                        Travel
-                                        <span>(15)</span>
-                                    </p>
-                                    <div class="button cat-button">
-                                        <span>
-                                            <i class="fal fa-chevron-right"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="widget-ad-banner two bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.png')">
-                            <div class="content">
-                                <span class="discount">20% off</span>
-                                <h2 class="heading-secondary">Home Garden</h2>
-                                <p class="body-text">Magna incididunt commodo aute consectetur cupida.</p>
-                                <a href="#" class="button icon-button active">
-                                    <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
                             </div>
+
                         </div>
-                        
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- ============= AD CAMPAIGN ============= -->
