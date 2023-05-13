@@ -12,7 +12,7 @@ for ($PreviewmostUpdatedPostRow = 0; $PreviewmostUpdatedPostRow < $stmt->rowCoun
     <div class="widget-category">
         <div class="cat-thumb bg-cover" style="background-image: url('admin/uploads/blogUpload/<?php echo $PreviewmostUpdatedPostData['postImage'] ?>')"></div>
         <div class="cat-content">
-            <a href="blog-list.php">
+            <a href="blog-list.php?postID=<?php echo $PreviewmostUpdatedPostData['postID'] ?>">
                 <h4 class="cat-title"><?php echo $PreviewmostUpdatedPostData['postTitle'] ?></h4>
             </a>
             <div class="cat-meta">

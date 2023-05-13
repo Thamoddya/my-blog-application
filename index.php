@@ -200,7 +200,7 @@ $PageName = "Blog Home ";
     <section class="recent-post-wrapper section-padding">
         <div class="container">
             <div class="section-head">
-                <h2 class="heading-primary">Recent in newlog</h2>
+                <h2 class="heading-primary">Recent Posts</h2>
                 <a href="blog-list.php" class="button button-minimal">
                     View all
                     <span class="icon">
@@ -211,6 +211,8 @@ $PageName = "Blog Home ";
             <div class="row gy-5 justify-content-end">
                 <div class="col-lg-3 sidebar">
                     <div class="gradient-bar"></div>
+
+
                     <div class="recent-post-card">
                         <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb1.png')"></div>
                         <div class="card-content">
@@ -229,6 +231,8 @@ $PageName = "Blog Home ";
                             </a>
                         </div>
                     </div>
+
+
                     <div class="recent-post-card">
                         <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb2.png')"></div>
                         <div class="card-content">
@@ -245,6 +249,8 @@ $PageName = "Blog Home ";
                             </a>
                         </div>
                     </div>
+
+
                     <!-- Ad banner -->
                     <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/recent-post/add-banner2.png')">
                         <div class="content">
@@ -267,6 +273,7 @@ $PageName = "Blog Home ";
                                 <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb3.png')"></div>
                                 <span class="category">Careers</span>
                                 <div class="card-content">
+
                                     <div class="card-meta">
                                         <div class="meta-item post-author">
                                             <div class="author-avatar bg-cover" style="

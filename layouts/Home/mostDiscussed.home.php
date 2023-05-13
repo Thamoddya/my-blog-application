@@ -33,7 +33,7 @@ for ($mostUpdatedPostRow = 0; $mostUpdatedPostRow < $stmt->rowCount(); $mostUpda
                         <?php echo $mostUpdatedPostData['viewCount'] ?>
                     </span>
                 </div>
-                <a href="blog-list.php" class="button post-button">
+                <a href="blog-list.php?postID=<?php echo $mostUpdatedPostData['postID'] ?>" class="button post-button">
                     <span class="icon">
                         <img src="assets/img/icons/long-arrow.png" alt="arrow" />
                     </span>
