@@ -31,6 +31,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-6">
+                        <img src="assets/img/knowladge addict logo.png">
+                        </div>
+                        <div class="col-6">
+                        <img src="assets/img/java institutelogo-black.png" >
+                        </div>
+                    </div>
+                    
+              
+                </div>
                 
             </div>
         </div>

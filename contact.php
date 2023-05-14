@@ -74,8 +74,15 @@ $PageName = "Contact page";
                                 <input type="email" class="form-control form-field" id="email" name="email" placeholder="Enter Email" required />
                                 <input type="text" class="form-control form-field" id="InputSubject" name="subject" placeholder="Enter Subject" />
                                 <textarea class="form-control form-text-field" id="message" name="message" placeholder="Enter Message" required></textarea>
-                                <button class="button button-primary mt-10" onclick="sendEmail();">Send Message</button>
+                                <button class="button button-primary mt-10 "  id="button" onclick="sendEmail();">Send Message</button>
+
+                                <button class="button button-primary mt-10 d-none" type="button" id="loader" disabled>
+                                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Wait...</span>
+                                </button>
+
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -88,7 +95,8 @@ $PageName = "Contact page";
 
     <script>
         const sendEmail = () => {
-
+            $('#button').addClass('d-none');
+            $('#loader').removeClass('d-none');
             var formdata = new FormData();
             formdata.append("name", $('#name').val());
             formdata.append("email", $('#email').val());
@@ -101,13 +109,21 @@ $PageName = "Contact page";
                 processData: false,
                 contentType: false,
                 success: function(response) {
-                    console.log(response);
+                    if (response == 'success') {
+                        $('#button').removeClass('d-none');
+                        $('#button').html('Sent Successful');
+                        $('#button').prop('disabled', true);
+                        $('#loader').addClass('d-none');
+                    } else {
+                        $('#button').removeClass('d-none');
+                        $('#button').html(`Email ${response}`);
+                        $('#button').prop('disabled', true);
+                        $('#loader').addClass('d-none');
+                    }
                 }
             });
-
         };
     </script>
-
 
     <?php
     include_once "./components/footer.component.php";

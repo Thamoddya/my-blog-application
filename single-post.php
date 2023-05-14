@@ -115,15 +115,31 @@ $PageName = $allPostData['postTitle'];
                                         <?php
                                         }
                                         ?>
-                                        <?php
-                                        if (!empty($allBlogData['otherImg'])) {
-                                        ?>
-                                            <div class="card-thumb bg-cover" style="background-image: url('admin/uploads/blogUpload/<?php echo $allBlogData['otherImg'] ?>')"></div>
 
-                                        <?php
-                                        }
-                                        ?>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <?php
+                                                    if (!empty($allBlogData['otherImg1'])) {
+                                                    ?>
+                                                        <div class="card-thumb bg-cover" style="background-image: url('admin/uploads/blogUpload/<?php echo $allBlogData['otherImg1'] ?>')"></div>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <div class="col-6">
+                                                    <?php
+                                                    if (!empty($allBlogData['otherImg2'])) {
+                                                    ?>
+                                                        <div class="card-thumb bg-cover" style="background-image: url('admin/uploads/blogUpload/<?php echo $allBlogData['otherImg2'] ?>')"></div>
 
+                                                    <?php
+                                                    }
+                                                    ?>
+
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <?php
                                         if (!empty($allBlogData['paragraph2'])) {
@@ -135,8 +151,7 @@ $PageName = $allPostData['postTitle'];
                                         <?php
                                         if (!empty($allBlogData['quote'])) {
                                         ?>
-                                            <!-- Post quote -->
-                                            <div class="post-quote">
+                                            <div class="post-quote mt-3">
                                                 <p class="body-text">
                                                     “<?php echo $allBlogData['quote'] ?> “
                                                 </p>
@@ -249,10 +264,6 @@ $PageName = $allPostData['postTitle'];
         </div>
     </section>
 
-
-
 </body>
-
-
 
 </html>

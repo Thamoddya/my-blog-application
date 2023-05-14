@@ -1,7 +1,7 @@
 <?php
 
 require_once(ROOT_PATH . '/../../connection.php');
-$stmt = $connection->prepare("SELECT * FROM addtorecent INNER JOIN allblogs ON allblogs.postID = addtorecent.postID INNER JOIN postviews ON postviews.postID = addtorecent.postID LIMIT :limitNumber");
+$stmt = $connection->prepare("SELECT * FROM addtorecent INNER JOIN allblogs ON allblogs.postID = addtorecent.postID INNER JOIN postviews ON postviews.postID = addtorecent.postID ORDER BY allblogs.id DESC  LIMIT :limitNumber");
 $stmt->bindValue(":limitNumber", 2, PDO::PARAM_INT);
 $stmt->execute();
 

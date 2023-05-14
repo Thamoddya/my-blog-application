@@ -34,7 +34,7 @@ $PageName = "Blog Home ";
     <!-- ============= FEATURED TOPICS ============= -->
     <section class="featured-topics-wrapper section-padding">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head bg-light rounded-3">
                 <h2 class="heading-primary">Latest Topics</h2>
                 <a href="#" class="button button-minimal">
                     View all
@@ -43,7 +43,7 @@ $PageName = "Blog Home ";
                     </span>
                 </a>
             </div>
-            <div class="row gy-5">
+            <div class="row gy-5 ">
                 <div class="col-lg-9 left-content">
 
                     <?php
