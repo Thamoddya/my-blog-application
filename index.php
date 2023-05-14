@@ -56,21 +56,10 @@ $PageName = "Blog Home ";
                         <div class="sidebar-widget widget-categories">
                             <div class="gradient-bar mb-30"></div>
                             <h3 class="heading-tertiary mb-20">Categories</h3>
-
                             <?php
                             require_once "./layouts/Home/Categories.home.php";
+                            require_once "./components/smallAd.component.php";
                             ?>
-
-                            <div class="widget-ad-banner two bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.gif')">
-                                <div class="content">
-                                    <a href="https://thamo.ga/" class="button icon-button active ">
-                                        <span>
-                                            <i class="fas fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -156,22 +145,9 @@ $PageName = "Blog Home ";
     </section>
 
     <!-- ============= AD CAMPAIGN ============= -->
-    <div class="container mt-1">
-        <div class="ad-campaign bg-cover" style="background-image: url('assets/img/add-campaign-1.png')">
-            <div class="content-left">
-                <span class="discount">Knowladge Addict</span>
-            </div>
-            <div class="content-right">
-                <div class="content offset-lg-4 d-none d-lg-flex">
-                    <a href="https://thamo.ga/" class="button icon-button active ">
-                        <span class="icon">
-                            <i class="fas fa-chevron-right"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+    include_once "./components/largeWidthAd.component.php";
+    ?>
 
     <!-- ============= RECENT POST ============= -->
     <section class="recent-post-wrapper section-padding">
@@ -191,17 +167,9 @@ $PageName = "Blog Home ";
 
                     <?php
                     include_once "./layouts/Home/recentPost1.home.php";
+                    include_once "./components/smalllAd2.component.php";
                     ?>
-                    <!-- Ad banner -->
-                    <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.gif')">
-                        <div class="content">
-                            <a href="https://thamo.ga/" class="button icon-button active ">
-                                <span>
-                                    <i class="fas fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="col-lg-9">
                     <div class="row gy-4 main-post-card-wrapper">
