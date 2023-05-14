@@ -24,7 +24,7 @@ if ($getBlogDataSQLQuery->rowCount() > 0) {
     exit();
 }
 
-print_r($allPostData);
+
 $PageName = $allPostData['postTitle'];
 
 
@@ -93,8 +93,8 @@ $PageName = $allPostData['postTitle'];
                                         ?>
                                     </span>
                                     <span class="meta-item">
-                                        <i class="fal fa-comment"></i>
-                                        13
+                                        <i class="fal fa-eye"></i>
+                                        <?php echo $allPostData['viewCount'] ?>
                                     </span>
                                     <span class="meta-item">
                                         <i class="fal fa-share"></i>
@@ -108,90 +108,105 @@ $PageName = $allPostData['postTitle'];
                                         </h3>
 
 
-                                        <p class="body-text">
-                                            Pariatur cupidatat Lorem irure nisi. Velit qui irure consectetur do cupi
-                                            roident id est ex sunt nostrud nisi mine consectetur do cupi roident id
-                                            est ex sunt nostrud nisi minim ut. Cupidatat velit dolore consectetur
-                                            deserunt laboris magna eiusmod aliquip consectetur commodo in eiusmod
-                                            aliqua cupidatat. Nostrud laboris et eu mollit qui esse dolore
-                                            exercitation in dolore sint nisi eu aliqua. Sit ipsum cillum commodo
-                                            enim eiusmod. Eiusmod et anim laborum consectetur. Proident nostrud anim
-                                            nisi sunt veniam. Labore amet eiusmod dolor adipisicing Lorem tempor
-                                            cillum incididunt proident consequat laborum. Velit anim minim est
-                                            consequat commodo eu reprehenderit eiusmod nisi amet quis tempor
-                                            incididunt. Irure proident aute non sit adipisicing nulla sit proident
-                                            dolore sunt. Aute aute Lorem sint sunt et fugiat laborum. Qui incididunt
-                                            aute pariatur aute laborum elit nulla amet magna enim.
-                                        </p>
-                                        <p class="body-text">
-                                            Pariatur cupidatat Lorem irure nisi. Velit qui irure consectetur do cupi
-                                            roident id est ex sunt nostrud nisi mine consectetur do cupi roident id
-                                            est ex sunt nostrud nisi minim ut. Cupidatat velit dolore consectetur
-                                            deserunt laboris magna eiusmod aliquip consectetur commodo in eiusmod
-                                            aliqua cupidatat. Nostrud laboris et eu mollit qui esse dolore
-                                            exercitation in dolore sint nisi eu aliqua. Sit ipsum cillum commodo
-                                            enim eiusmod. Eiusmod et anim laborum consectetur. Proident nostrud anim
-                                            nisi sunt veniam. Labore amet eiusmod dolor adipisicing Lorem tempor
-                                            cillum incididunt proident consequat laborum. Velit anim minim est
-                                            consequat commodo eu reprehenderit eiusmod nisi amet quis tempor
-                                            incididunt. Irure proident aute non sit adipisicing nulla sit proident
-                                            dolore sunt. Aute aute Lorem sint sunt et fugiat laborum. Qui incididunt
-                                            aute pariatur aute laborum elit nulla amet magna enim.
-                                        </p>
-                                        <p class="body-text">
-                                            Pariatur cupidatat Lorem irure nisi. Velit qui irure consectetur do cupi
-                                            roident id est ex sunt nostrud nisi mine consectetur do cupi roident id
-                                            est ex sunt nostrud nisi minim ut. Cupidatat velit dolore consectetur
-                                            deserunt laboris magna eiusmod aliquip consectetur commodo in eiusmod
-                                            aliqua cupidatat. Nostrud laboris et eu mollit qui esse dolore
-                                            exercitation in dolore sint nisi eu aliqua. Sit ipsum cillum commodo
-                                            enim eiusmod. Eiusmod et anim laborum consectetur. Proident nostrud anim
-                                            nisi sunt veniam. Labore amet eiusmod dolor adipisicing Lorem tempor
-                                            cillum incididunt proident consequat laborum. Velit anim minim est
-                                            consequat commodo eu reprehenderit eiusmod nisi amet quis tempor
-                                            incididunt. Irure proident aute non sit adipisicing nulla sit proident
-                                            dolore sunt. Aute aute Lorem sint sunt et fugiat laborum. Qui incididunt
-                                            aute pariatur aute laborum elit nulla amet magna enim.
-                                        </p>
+                                        <?php
+                                        if (!empty($allBlogData['paragraph1'])) {
+                                        ?>
+                                            <p class="body-text"><?php echo $allBlogData['paragraph1'] ?></p>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if (!empty($allBlogData['otherImg'])) {
+                                        ?>
+                                            <div class="card-thumb bg-cover" style="background-image: url('admin/uploads/blogUpload/<?php echo $allBlogData['otherImg'] ?>')"></div>
+
+                                        <?php
+                                        }
+                                        ?>
+
+
+                                        <?php
+                                        if (!empty($allBlogData['paragraph2'])) {
+                                        ?>
+                                            <p class="body-text"><?php echo $allBlogData['paragraph2'] ?></p>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if (!empty($allBlogData['quote'])) {
+                                        ?>
+                                            <!-- Post quote -->
+                                            <div class="post-quote">
+                                                <p class="body-text">
+                                                    “<?php echo $allBlogData['quote'] ?> “
+                                                </p>
+                                                <div class="quote-bottom">
+                                                    <a href="#" class="author"><?php echo $allBlogData['quoteAutor'] ?></a>
+                                                    <span class="gradient-bar small"></span>
+                                                </div>
+
+                                                <img class="quote-icon" src="assets/img/single-post/quote-icon.png" alt="" />
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
+
+                                        <?php
+                                        if (!empty($allBlogData['paragraph3'])) {
+                                        ?>
+                                            <p class="body-text"><?php echo $allBlogData['paragraph3'] ?></p>
+                                        <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Post quote -->
-                        <div class="post-quote">
-                            <p class="body-text">
-                                “As a participatory media culture, social media platforms or social networking sites
-                                are forms of mass communication that, through media technologies, allow large
-                                amounts of product and distribution of content to reach the largest audience
-                                possible. “
-                            </p>
-                            <div class="quote-bottom">
-                                <a href="#" class="author">Ralph Edwards</a>
-                                <span class="gradient-bar small"></span>
-                            </div>
-
-                            <img class="quote-icon" src="assets/img/single-post/quote-icon.png" alt="" />
-                        </div>
                         <!-- Conclution point -->
-                        <div class="post-point">
-                            <h3 class="heading-secondary">Final Conclusion</h3>
-                            <p class="body-text">
-                                Pariatur cupidatat Lorem irure nisi. Velit qui irure consectetur do cupi roident id
-                                est ex sunt nostrud nisi mine consectetur do cupi roident id est ex sunt nostrud
-                                nisi minim ut. Cupidatat velit dolore consectetur deserunt laboris magna eiusmod
-                                aliquip consectetur commodo in eiusmod aliqua cupidatat. Nostrud laboris et eu
-                                mollit qui esse dolore exercitation in dolore sint nisi eu aliqua.
-                            </p>
-                        </div>
+                        <?php
+                        if (!empty($allBlogData['conclution'])) {
+                        ?>
+                            <div class="post-point">
+                                <h3 class="heading-secondary"> Conclusion</h3>
+                                <p class="body-text">
+                                    <?php echo $allBlogData['conclution'] ?>
+                                </p>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                         <!-- Tags -->
                         <div class="tags">
                             <h3 class="heading-secondary">Tags</h3>
                             <div class="categories-tags">
-                                <a href="single-post.php"> kitchen </a>
-                                <a href="single-post.php"> garden </a>
-                                <a href="single-post.php"> cars </a>
+                                <?php
+
+
+                                $getTagNamesForPost = $connection->prepare("SELECT * FROM posttags WHERE postID = :postID");
+                                $getTagNamesForPost->bindValue(":postID", $postID, PDO::PARAM_INT);
+                                $getTagNamesForPost->execute();
+
+                                if ($getTagNamesForPost->rowCount() > 0) {
+
+
+                                    for ($tagcount = 0; $tagcount < $getTagNamesForPost->rowCount(); $tagcount++) {
+                                        $PostTagData = $getTagNamesForPost->fetch();
+
+                                ?>
+                                        <a href="single-post.php"> <?php echo $PostTagData['tagName'] ?> </a>
+
+                                <?php
+                                    }
+                                } else {
+                                    echo "Waiting for tags...";
+                                }
+                                ?>
                             </div>
                         </div>
+
+
+
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -199,130 +214,34 @@ $PageName = $allPostData['postTitle'];
                         <!-- Widget search box -->
 
                         <h3 class="heading-tertiary">Recent Posts</h3>
-                        <div class="recent-post-card">
-                            <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb1.png')"></div>
-                            <div class="card-content">
-                                <div class="post-meta">
-                                    <span class="meta-item"> Design </span>
-                                    <span class="meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                </div>
-                                <a href="single-post.php">
-                                    <h3 class="heading-secondary">
-                                        Animated Cartoon Is The New Future Of Entertainment
-                                    </h3>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="recent-post-card">
-                            <div class="card-thumb bg-cover" style="background-image: url('assets/img/recent-post/thumb2.png')"></div>
-                            <div class="card-content">
-                                <div class="post-meta">
-                                    <span class="meta-item"> Food </span>
-                                    <span class="meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                </div>
-                                <a href="single-post.php">
-                                    <h3 class="heading-secondary">The Beautiful French Village Of Saint-Emilion</h3>
-                                </a>
-                            </div>
-                        </div>
 
-                        <!-- Widget add banner
-                        <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.png')">
+                        <?php
+                        include_once "./layouts/singlePost/mainRecent.singlePost.php";
+                        ?>
+
+                        <!-- Widget add banner -->
+                        <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.gif')">
                             <div class="content">
-                                <span class="discount">20% off</span>
-                                <h2 class="heading-secondary">Home Garden</h2>
-                                <p class="body-text">Magna incididunt commodo aute consectetur cupida.</p>
-                                <a href="#" class="button icon-button active">
+                                <a href="https://thamo.ga/" class="button icon-button active ">
                                     <span>
                                         <i class="fas fa-chevron-right"></i>
                                     </span>
                                 </a>
                             </div>
-                        </div> -->
-                        <!-- Widget social profile -->
-                        <div class="widget-social-profile">
-                            <h3 class="heading-tertiary mb-10">Follow us</h3>
-                            <p class="body-text">You can find us here</p>
-                            <div class="social-items">
-                                <a href="#" class="social-link">
-                                    <span class="icon">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <span class="icon">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <span class="icon">
-                                        <i class="fab fa-twitter"></i>
-                                    </span>
-                                </a>
-                            </div>
                         </div>
+                        <!-- Widget social profile -->
+
+                        <?php
+                        include_once "./components/socialprofile.component.php";
+                        ?>
                         <!-- Widget popular post -->
                         <!-- Widget popular post -->
                         <div class="widget-popular-post mt-30">
                             <h3 class="heading-tertiary mb-20">Popular posts</h3>
                             <!-- Cat item -->
-                            <div class="widget-category">
-                                <div class="cat-thumb bg-cover" style="background-image: url('assets/img/blog/recent-post-sm1.png')"></div>
-                                <div class="cat-content">
-                                    <a href="#">
-                                        <h4 class="cat-title">How to Make Every Trip the Best Trip Ever</h4>
-                                    </a>
-                                    <div class="cat-meta">
-                                        <span class="post-date meta-item"> Feb 06, 2022 </span>
-                                        <span class="meta-item comment">
-                                            <i class="fal fa-comment"></i>
-                                            13
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Cat item -->
-                            <div class="widget-category">
-                                <div class="cat-thumb bg-cover" style="background-image: url('assets/img/blog/recent-post-sm2.png')"></div>
-                                <div class="cat-content">
-                                    <a href="#">
-                                        <h4 class="cat-title">
-                                            Mental Shoot Tips to Cope With the End of Summer
-                                        </h4>
-                                    </a>
-                                    <div class="cat-meta">
-                                        <span class="post-date meta-item"> Feb 06, 2022 </span>
-                                        <span class="meta-item comment">
-                                            <i class="fal fa-comment"></i>
-                                            13
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Cat item -->
-                            <div class="widget-category">
-                                <div class="cat-thumb bg-cover" style="background-image: url('assets/img/blog/recent-post-sm3.png')"></div>
-                                <div class="cat-content">
-                                    <a href="#">
-                                        <h4 class="cat-title">The Beautiful French Village Of Saint-Emilion</h4>
-                                    </a>
-                                    <div class="cat-meta">
-                                        <span class="post-date meta-item"> Feb 06, 2022 </span>
-                                        <span class="meta-item comment">
-                                            <i class="fal fa-comment"></i>
-                                            13
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            include_once "./layouts/singlePost/popularPost.singlepost.php";
+                            ?>
                         </div>
                     </div>
                 </div>

@@ -146,27 +146,9 @@ $PageName = "Blog Home ";
                         include_once "./layouts/Home/engagedPostpreviewPost.home.php";
                         ?>
                         <!-- WIDGET SOCIAL PROFILE -->
-                        <div class="widget-social-profile">
-                            <h3 class="heading-secondary">Contact Me</h3>
-                            <p class="body-text">You Can Find Me Here</p>
-                            <div class="social-items">
-                                <a href="https://web.facebook.com/Thamoddya" class="social-link">
-                                    <span class="icon">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </span>
-                                </a>
-                                <a href="https://www.linkedin.com/in/thamoddya-rashmitha/" class="social-link">
-                                    <span class="icon">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </span>
-                                </a>
-                                <a href="https://wa.me/0769458554" class="social-link">
-                                    <span class="icon">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                        <?php
+                        include_once "./components/socialprofile.component.php";
+                        ?>
                     </div>
                 </div>
             </div>
@@ -181,7 +163,7 @@ $PageName = "Blog Home ";
             </div>
             <div class="content-right">
                 <div class="content offset-lg-4 d-none d-lg-flex">
-                    <a href="#" class="button icon-button active ">
+                    <a href="https://thamo.ga/" class="button icon-button active ">
                         <span class="icon">
                             <i class="fas fa-chevron-right"></i>
                         </span>
