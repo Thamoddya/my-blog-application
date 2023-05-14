@@ -1,11 +1,5 @@
 <?php
 session_start();
-$postID = $_GET['postID'];
-
-if (empty($postID)) {
-    header('Location: ./index.php');
-    exit();
-};
 
 require_once "./connection.php";
 $PageName = "All Blog List";
@@ -24,7 +18,6 @@ $PageName = "All Blog List";
     ?>
 </head>
 
-
 <body>
     <!-- SCROLL TO TOP -->
     <div class="progress-wrap">
@@ -36,7 +29,6 @@ $PageName = "All Blog List";
     include_once "./components/navbar.component.php";
     ?>
 
-    <!-- ============= BLOG LIST ============= -->
     <section class="blog-list-wrapper section-padding">
         <div class="container">
             <div class="section-head">
@@ -49,139 +41,32 @@ $PageName = "All Blog List";
                 </ul>
             </div>
             <div class="row gy-5">
+
                 <div class="col-lg-9">
-                    <div class="left-content">
-                        <!-- Post card -->
-                        <div class="post-card">
-                            <div class="card-thumb bg-cover" style="background-image: url('assets/img/post-list/post1.png')"></div>
-                            <div class="card-content">
-                                <div class="card-meta">
-                                    <div class="meta-item post-author">
-                                        <span class="category">Travel</span>
-                                        <a href="single-post.html" class="author-name">Terence Whittle</a>
-                                    </div>
-                                    <span class="meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-share-alt"></i>
-                                    </span>
-                                </div>
-                                <div class="post-content">
-                                    <div>
-                                        <a href="single-post.html">
-                                            <h3 class="heading-primary">
-                                                Stock futures are flat ahead of Fed’s Jackson Hole symposium
-                                            </h3>
-                                        </a>
-                                        <p class="body-text">
-                                            A breakdown or a flat tire can happen to anyone at any time, and what
-                                            you have in your car can make the difference between getting back on the
-                                            ...
-                                        </p>
-                                    </div>
-                                    <a href="single-post.html" class="button icon-button">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Post card -->
-                        <div class="post-card">
-                            <div class="card-thumb bg-cover" style="background-image: url('assets/img/post-list/post2.png')"></div>
-                            <div class="card-content">
-                                <div class="card-meta">
-                                    <div class="meta-item post-author">
-                                        <span class="category">Lifestyle</span>
-                                        <a href="single-post.html" class="author-name"> Finn Hills</a>
-                                    </div>
-                                    <span class="meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-share-alt"></i>
-                                    </span>
-                                </div>
-                                <div class="post-content">
-                                    <div>
-                                        <a href="single-post.html">
-                                            <h3 class="heading-primary">
-                                                What It Feels Like to No Longer Worry About Money
-                                            </h3>
-                                        </a>
-                                        <p class="body-text">
-                                            A breakdown or a flat tire can happen to anyone at any time, and what
-                                            you have in your car can make the difference between getting back on the
-                                            ...
-                                        </p>
-                                    </div>
-                                    <a href="single-post.html" class="button icon-button">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Post card -->
-                        <div class="post-card">
-                            <div class="card-thumb bg-cover" style="background-image: url('assets/img/post-list/post3.png')"></div>
-                            <div class="card-content">
-                                <div class="card-meta">
-                                    <div class="meta-item post-author">
-                                        <span class="category">Creative</span>
-                                        <a href="single-post.html" class="author-name"> Raheel Newman</a>
-                                    </div>
-                                    <span class="meta-item"> Feb 06, 2022 </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-comment"></i>
-                                        13
-                                    </span>
-                                    <span class="meta-item">
-                                        <i class="fal fa-share-alt"></i>
-                                    </span>
-                                </div>
-                                <div class="post-content">
-                                    <div>
-                                        <a href="single-post.html">
-                                            <h3 class="heading-primary">
-                                                It Really Have Good Feeling When You Enjoy Nature
-                                            </h3>
-                                        </a>
-                                        <p class="body-text">
-                                            A breakdown or a flat tire can happen to anyone at any time, and what
-                                            you have in your car can make the difference between getting back on the
-                                            ...
-                                        </p>
-                                    </div>
-                                    <a href="single-post.html" class="button icon-button">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PAGINATION -->
+                    
+                    <?php
+
+                    require_once "./layouts/blogList/mainAllBlogs.blogList.php";
+                    // Get the total number of items
+                    $totalItems = $connection->query("SELECT COUNT(*) FROM allblogs")->fetchColumn();
+
+                    // Calculate the total number of pages
+                    $totalPages = ceil($totalItems / $perPage);
+
+                    // Generate the pagination links
+                    ?>
                     <ul class="pagination-wrapper">
-                        <li><a href="#" class="active">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                        <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                            <li><a href="blog-list.php?page=<?php echo $i ?>" <?php if ($i === $pageNumber) echo 'class="active"' ?>><?php echo $i ?></a></li>
+                        <?php endfor; ?>
                     </ul>
-                    <!-- ============= AD CAMPAIGN-2 ============= -->
-
-                  <?php
+                    <?php
                     include_once "./components/largeWidthAd.component.php";
-                  ?>
-
+                    ?>
                 </div>
+
+
+
                 <div class="col-lg-3">
                     <div class="right-content">
                         <!-- Widget search box -->
@@ -197,7 +82,6 @@ $PageName = "All Blog List";
                         include_once "./layouts/blogList/recent.blogList.php";
                         ?>
 
-                        <!-- Widget category -->
                         <div class="widget-categories">
                             <h3 class="footer-heading mb-20">Categories</h3>
                             <div class="categories-tags">
@@ -208,17 +92,13 @@ $PageName = "All Blog List";
 
                             </div>
                         </div>
-                        <!-- Widget ad banner -->
-                        <?php
 
+                        <?php
                         include_once "./components/smalllAd2.component.php";
                         include_once "./components/socialprofile.component.php";
                         ?>
-
-                        <!-- Widget popular post -->
                         <div class="widget-popular-post mt-30">
                             <h3 class="heading-tertiary mb-20">Popular posts</h3>
-                            <!-- Cat item -->
                             <?php
                             include_once "./layouts//singlePost/popularPost.singlepost.php";
                             ?>

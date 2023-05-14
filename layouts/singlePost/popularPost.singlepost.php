@@ -1,6 +1,6 @@
 <?php
 include_once "./connection.php";
-$stmt = $connection->prepare("SELECT * FROM allblogs INNER JOIN category ON category.id = allblogs.categoryID INNER JOIN postviews ON postviews.postID = allblogs.postID WHERE allblogs.postID <> '$postID' ORDER BY postviews.viewCount DESC LIMIT :limitNumber");
+$stmt = $connection->prepare("SELECT * FROM allblogs INNER JOIN category ON category.id = allblogs.categoryID INNER JOIN postviews ON postviews.postID = allblogs.postID  ORDER BY postviews.viewCount DESC LIMIT :limitNumber");
 $stmt->bindValue(":limitNumber", 3, PDO::PARAM_INT);
 $stmt->execute();
 ?>
