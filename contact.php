@@ -68,16 +68,14 @@ $PageName = "Contact page";
                 <div class="col-lg-5 offset-lg-1">
                     <div class="right-content">
                         <div class="contact_us_contact_form contact-form">
-                            <form name="contact-form" id="ContactForm">
+                            <div id="contact-form">
                                 <h3 class="form-heading heading-2 white mb-20">Send a message</h3>
-                                <input type="text" class="form-control form-field" id="InputName" name="full_name" placeholder="Enter Name" />
-                                <input type="email" class="form-control form-field" id="InputEmail" name="email" placeholder="Enter Email" />
-                                <input type="text" class="form-control form-field" id="InputMobile" name="mobile" placeholder="Enter Mobile" />
+                                <input type="text" class="form-control form-field" id="name" name="full_name" placeholder="Enter Name" required />
+                                <input type="email" class="form-control form-field" id="email" name="email" placeholder="Enter Email" required />
                                 <input type="text" class="form-control form-field" id="InputSubject" name="subject" placeholder="Enter Subject" />
-                                <textarea class="form-control form-text-field" id="InputMessage" name="message" placeholder="Enter Message"></textarea>
-
-                                <button class="button button-primary mt-10" type="submit">Send Message</button>
-                            </form>
+                                <textarea class="form-control form-text-field" id="message" name="message" placeholder="Enter Message" required></textarea>
+                                <button class="button button-primary mt-10" onclick="sendEmail();">Send Message</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,106 +83,39 @@ $PageName = "Contact page";
         </div>
     </section>
 
-    <!-- ============= CONTACT MAP ============= -->
-    <div class="map-box clearfix section-padding">
-        <div class="container">
-            <div id="map_container">
-                <div id="map_creadom" style="height: 400px"></div>
-            </div>
-        </div>
-    </div>
 
-    <!-- ============= FOOTER ============= -->
-    <footer class="footer-wrapper">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-4">
-                        <div class="widget-about">
-                            <h3 class="footer-heading">About</h3>
-                            <p class="body-text">
-                                Consequat quis laboris excepteur sint. Culpa quis cillum qui sunt in ad sint eu est
-                                consectetur. Do cupidatat pariatur nulla ad ad proident qui culpa duis velit
-                                pariatur.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="widget-categories">
-                            <h3 class="footer-heading">Categories</h3>
-                            <div class="categories-tags">
-                                <a href="single-post.html" class="active"> travel </a>
-                                <a href="single-post.html"> kitchen </a>
-                                <a href="single-post.html"> cars </a>
-                                <a href="single-post.html"> garden </a>
-                                <a href="single-post.html"> home </a>
-                                <a href="single-post.html"> holiday </a>
-                                <a href="single-post.html"> software </a>
-                                <a href="single-post.html"> health </a>
-                                <a href="single-post.html"> appliences </a>
-                                <a href="single-post.html"> money </a>
-                                <a href="single-post.html"> pets </a>
-                                <a href="single-post.html"> office </a>
-                                <a href="single-post.html"> electronics </a>
-                                <a href="single-post.html"> hobby </a>
-                                <a href="single-post.html"> baby </a>
-                                <a href="single-post.html"> digital </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 offset-xl-1">
-                        <div class="widget-search">
-                            <h3 class="footer-heading">Search</h3>
-                            <p class="body-text">A breakdown or a flat tire can happen</p>
-                            <div class="widget-search-box">
-                                <input type="text" placeholder="Search" />
-                                <button class="search-btn">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="bottom-content">
-                    <div class="bottom-left">
-                        <p>©Newlog 2022. All rights reserved.</p>
-                    </div>
-                    <div class="bottom-right">
-                        <div class="footer-bottom-links">
-                            <a href="#">Privacy Policy</a>
-                            <span>|</span>
-                            <a href="#">Terms and conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <!-- ============= VENDORS JS ============= -->
-    <script src="assets/js/vendors/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/vendors/bootstrap.min.js"></script>
-    <!--GOOGEL MAP -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmj6teVibo65eAAix-ZKeEhwwBrRcCbj8"></script>
-    <!--GOOGEL MAP -->
-    <script type="text/javascript" src="assets/contact-form/google-map.js"></script>
 
-    <!--validate -->
-    <script type="text/javascript" src="assets/contact-form/jquery.validate.min.js"></script>
-    <!--contact -->
-    <script type="text/javascript" src="assets/contact-form/contact.js"></script>
-    <script src="assets/js/vendors/jquery.waypoints.min.js"></script>
-    <script src="assets/js/vendors/slick.min.js"></script>
-    <script src="assets/js/vendors/metismenu.js"></script>
+    <script>
+        const sendEmail = () => {
 
-    <!-- ============= MAIN JS ============= -->
-    <script src="assets/js/active.js"></script>
+            var formdata = new FormData();
+            formdata.append("name", $('#name').val());
+            formdata.append("email", $('#email').val());
+            formdata.append("message", $('#message').val());
+
+            $.ajax({
+                type: 'POST',
+                url: './process/sendEmail.process.php',
+                data: formdata,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    console.log(response);
+                }
+            });
+
+        };
+    </script>
+
+
+    <?php
+    include_once "./components/footer.component.php";
+    include_once "./components/body.imports.php";
+    ?>
+
 </body>
 
-<!-- Mirrored from html.themesdeveloper.net/newlog/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 May 2023 04:56:38 GMT -->
+
 
 </html>
