@@ -24,6 +24,12 @@ if ($getBlogDataSQLQuery->rowCount() > 0) {
     exit();
 }
 
+$updateViewCount = $connection->prepare("UPDATE postviews SET viewCount = :viewCount WHERE postID = :postID");
+$viewCount = $allPostData['viewCount'] + 1;
+$updateViewCount->bindValue(':viewCount', $viewCount);
+$updateViewCount->bindValue(':postID', $postID);
+$updateViewCount->execute();
+
 
 $PageName = $allPostData['postTitle'];
 

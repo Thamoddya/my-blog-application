@@ -66,6 +66,13 @@ $PageName = "Blog Home ";
             </div>
     </section>
 
+    <!-- Music Area -->
+    <div class="containerAnimate">
+        <?php
+            include_once "./layouts/Home/musicArea.home.php";
+        ?>
+    </div>
+
     <!-- ============= AD CAMPAIGN ============= -->
     <div class="container mt-2">
         <div class="ad-campaign bg-cover" style="background-image: url('assets/img/add-campaign-1.png')">
