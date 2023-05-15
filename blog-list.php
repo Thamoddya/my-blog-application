@@ -19,13 +19,9 @@ $PageName = "All Blog List";
 </head>
 
 <body>
-    <!-- SCROLL TO TOP -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
+
     <?php
+    include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
     ?>
 
@@ -43,7 +39,7 @@ $PageName = "All Blog List";
             <div class="row gy-5">
 
                 <div class="col-lg-9">
-                    
+
                     <?php
 
                     require_once "./layouts/blogList/mainAllBlogs.blogList.php";
@@ -64,8 +60,6 @@ $PageName = "All Blog List";
                     include_once "./components/largeWidthAd.component.php";
                     ?>
                 </div>
-
-
 
                 <div class="col-lg-3">
                     <div class="right-content">

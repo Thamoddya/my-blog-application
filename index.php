@@ -18,14 +18,11 @@ $PageName = "Blog Home ";
 </head>
 
 <body>
-    <!-- SCROLL TO TOP -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
+
+   
 
     <?php
+    include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
     include_once "./layouts/Home/hero.home.php";
     ?>
@@ -69,7 +66,7 @@ $PageName = "Blog Home ";
     <!-- Music Area -->
     <div class="containerAnimate">
         <?php
-            include_once "./layouts/Home/musicArea.home.php";
+        include_once "./layouts/Home/musicArea.home.php";
         ?>
     </div>
 

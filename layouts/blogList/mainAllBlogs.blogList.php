@@ -49,7 +49,7 @@
                     </div>
                     <div class="post-content">
                         <div>
-                            <a href="single-post.html">
+                            <a href="single-post.php?postID=<?php echo $AllBlogData['postID'] ?>">
                                 <h3 class="heading-primary">
                                     <?php echo $AllBlogData['postTitle'] ?>
                                 </h3>

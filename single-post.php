@@ -24,11 +24,24 @@ if ($getBlogDataSQLQuery->rowCount() > 0) {
     exit();
 }
 
-$updateViewCount = $connection->prepare("UPDATE postviews SET viewCount = :viewCount WHERE postID = :postID");
-$viewCount = $allPostData['viewCount'] + 1;
-$updateViewCount->bindValue(':viewCount', $viewCount);
-$updateViewCount->bindValue(':postID', $postID);
-$updateViewCount->execute();
+// $updateViewCount = $connection->prepare("UPDATE postviews SET viewCount = :viewCount WHERE postID = :postID");
+// $viewCount = $allPostData['viewCount'] + 1;
+// $updateViewCount->bindValue(':viewCount', $viewCount);
+// $updateViewCount->bindValue(':postID', $postID);
+// $updateViewCount->execute();
+
+
+// Check if session variable has been set for this post ID
+if(!isset($_SESSION['viewed_post_'.$postID])) {
+  
+  // Increment view count in database
+  $updateViewCount = $connection->prepare("UPDATE postviews SET viewCount = viewCount + 1 WHERE postID = :postID");
+  $updateViewCount->bindValue(':postID', $postID);
+  $updateViewCount->execute();
+  
+  // Set session variable to indicate that user has viewed this post
+  $_SESSION['viewed_post_'.$postID] = true;
+}
 
 
 $PageName = $allPostData['postTitle'];
@@ -50,14 +63,9 @@ $PageName = $allPostData['postTitle'];
 </head>
 
 <body>
-    <!-- SCROLL TO TOP -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-
+ 
     <?php
+        include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
     ?>
 
@@ -269,6 +277,10 @@ $PageName = $allPostData['postTitle'];
             </div>
         </div>
     </section>
+    <?php
+    include_once "./components/footer.component.php";
+    include_once "./components/body.imports.php";
+    ?>
 
 </body>
 

@@ -18,14 +18,8 @@ $PageName = "Contact page";
 </head>
 
 <body>
-    <!-- SCROLL TO TOP -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-
     <?php
+    include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
     ?>
 
@@ -74,7 +68,7 @@ $PageName = "Contact page";
                                 <input type="email" class="form-control form-field" id="email" name="email" placeholder="Enter Email" required />
                                 <input type="text" class="form-control form-field" id="InputSubject" name="subject" placeholder="Enter Subject" />
                                 <textarea class="form-control form-text-field" id="message" name="message" placeholder="Enter Message" required></textarea>
-                                <button class="button button-primary mt-10 "  id="button" onclick="sendEmail();">Send Message</button>
+                                <button class="button button-primary mt-10 " id="button" onclick="sendEmail();">Send Message</button>
 
                                 <button class="button button-primary mt-10 d-none" type="button" id="loader" disabled>
                                     <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -89,8 +83,6 @@ $PageName = "Contact page";
             </div>
         </div>
     </section>
-
-
 
 
     <script>
