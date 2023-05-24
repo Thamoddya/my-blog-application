@@ -28,12 +28,12 @@ $PageName = "All Blog List";
     <section class="blog-list-wrapper section-padding">
         <div class="container">
             <div class="section-head">
-                <h2 class="heading-secondary">Lifestye</h2>
+                <h2 class="heading-secondary">All Blogs</h2>
                 <ul class="c-bredcrumb">
                     <li>
                         <a href="#"> Home </a>
                     </li>
-                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">All Blogs</a></li>
                 </ul>
             </div>
             <div class="row gy-5">

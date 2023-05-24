@@ -19,8 +19,6 @@ $PageName = "Blog Home ";
 
 <body>
 
-   
-
     <?php
     include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
