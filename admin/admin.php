@@ -1,6 +1,6 @@
 <?php
-
-if(empty($_SESSION['adminID'])){
+session_start();
+if(empty($_SESSION['adminEmail'])){
     header('Location: ./adminLogin.php');
 }
 

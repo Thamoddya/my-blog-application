@@ -21,24 +21,28 @@
 
                         <form style="width: 23rem;">
                             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
-
-                            <div class="form-outline mb-4">
-                                <input type="email" id="form2Example18" class="form-control form-control-lg" />
-                                <label class="form-label" for="form2Example18">Email address</label>
+                            <div class="col-12">
+                                <div id="errorDetails" class="alert alert-success d-none" role="alert">
+                                    
+                                </div>
                             </div>
 
                             <div class="form-outline mb-4">
-                                <input type="password" id="form2Example28" class="form-control form-control-lg" />
-                                <label class="form-label" for="form2Example28">Password</label>
+                                <input type="email" id="adminEmail" class="form-control form-control-lg" />
+                                <label class="form-label" for="adminEmail">Email address</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="password" id="adminPassword" class="form-control form-control-lg" />
+                                <label class="form-label" for="adminPassword">Password</label>
                             </div>
 
                             <div class="pt-1 mb-4">
-                                <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                                <button class="btn btn-info btn-lg btn-block" type="button" onclick="validateAdmin();">Login</button>
                             </div>
 
                             <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
                             <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
-
                         </form>
 
                     </div>
@@ -50,6 +54,10 @@
             </div>
         </div>
     </section>
+
+    <?php
+    include_once "./includes/adminBody.include.php";
+    ?>
 </body>
 
 </html>
