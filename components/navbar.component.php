@@ -56,6 +56,9 @@
                         <a href="contact.php" class="button button-primary mt-20 ml-20 d-inline-block">Contact Us
                             <i class="fas fa-paper-plane"></i>
                         </a>
+                        <a href="./admin/admin.php" class="button button-primary mt-20 ml-20 d-inline-block">Admin Page
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
                     </nav>
 
                     <div class="action-bar">
