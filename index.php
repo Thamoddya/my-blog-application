@@ -64,11 +64,23 @@ $PageName = "Blog Home ";
             </div>
     </section>
 
-    <?php
-    include_once "./components/newsletter.component.php";
-    ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-4 offset-md-4">
+                        <?php
+                        include_once "./components/newsletter.component.php";
+                        ?>
+                    </div>
+                </div>
 
-  
+
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- ============= AD CAMPAIGN ============= -->
     <div class="container mt-2">
@@ -184,8 +196,6 @@ $PageName = "Blog Home ";
             </div>
         </div>
     </section>
-
-
     <?php
     include_once "./components/footer.component.php";
     include_once "./components/body.imports.php";
@@ -213,14 +223,12 @@ $PageName = "Blog Home ";
                         $('#newsletterButton').removeClass('d-none');
                         $('#newsletterButton').html('Sent');
                         $('#newsletterButton').prop('disabled', true);
-                        
-                    } 
-                    // else {
-                    //     $('#button').removeClass('d-none');
-                    //     $('#button').html(`Email ${response}`);
-                    //     $('#button').prop('disabled', true);
-                    //     $('#loader').addClass('d-none');
-                    // }
+                    } else {
+                        $('#newsletterButton').removeClass('d-none');
+                        $('#newsletterButton').html('Error');
+                        $('#newsletterButton').prop('disabled', true);
+                        $('#newsletterLoader').addClass('d-none');
+                    }
                 }
             });
 

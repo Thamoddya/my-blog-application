@@ -4985,8 +4985,7 @@ p {
   cursor: pointer;
   color: #000;
 }
-
-.arrowIcon {
+.arrowIcon{
   font-weight: 800;
   align-items: center;
 }
@@ -5025,7 +5024,6 @@ p {
     width: 100%;
   }
 }
-
 @media only screen and (max-width: 990px) {
   .hs__item {
     width: 100% / 2;
@@ -5150,9 +5148,7 @@ ul {
 
 /* Animations */
 @keyframes ringA {
-
-  from,
-  4% {
+  from, 4% {
     stroke-dasharray: 0 660;
     stroke-width: 20;
     stroke-dashoffset: -330;
@@ -5170,8 +5166,7 @@ ul {
     stroke-dashoffset: -595;
   }
 
-  40%,
-  54% {
+  40%, 54% {
     stroke-dasharray: 0 660;
     stroke-width: 20;
     stroke-dashoffset: -660;
@@ -5189,8 +5184,7 @@ ul {
     stroke-dashoffset: -925;
   }
 
-  90%,
-  to {
+  90%, to {
     stroke-dasharray: 0 660;
     stroke-width: 20;
     stroke-dashoffset: -990;
@@ -5198,9 +5192,7 @@ ul {
 }
 
 @keyframes ringB {
-
-  from,
-  12% {
+  from, 12% {
     stroke-dasharray: 0 220;
     stroke-width: 20;
     stroke-dashoffset: -110;
@@ -5218,8 +5210,7 @@ ul {
     stroke-dashoffset: -195;
   }
 
-  48%,
-  62% {
+  48%, 62% {
     stroke-dasharray: 0 220;
     stroke-width: 20;
     stroke-dashoffset: -220;
@@ -5237,8 +5228,7 @@ ul {
     stroke-dashoffset: -305;
   }
 
-  98%,
-  to {
+  98%, to {
     stroke-dasharray: 0 220;
     stroke-width: 20;
     stroke-dashoffset: -330;
@@ -5264,8 +5254,7 @@ ul {
     stroke-dashoffset: -175;
   }
 
-  36%,
-  58% {
+  36%, 58% {
     stroke-dasharray: 0 440;
     stroke-width: 20;
     stroke-dashoffset: -220;
@@ -5283,8 +5272,7 @@ ul {
     stroke-dashoffset: -395;
   }
 
-  94%,
-  to {
+  94%, to {
     stroke-dasharray: 0 440;
     stroke-width: 20;
     stroke-dashoffset: -440;
@@ -5292,9 +5280,7 @@ ul {
 }
 
 @keyframes ringD {
-
-  from,
-  8% {
+  from, 8% {
     stroke-dasharray: 0 440;
     stroke-width: 20;
     stroke-dashoffset: 0;
@@ -5312,8 +5298,7 @@ ul {
     stroke-dashoffset: -175;
   }
 
-  44%,
-  50% {
+  44%, 50% {
     stroke-dasharray: 0 440;
     stroke-width: 20;
     stroke-dashoffset: -220;
@@ -5331,15 +5316,14 @@ ul {
     stroke-dashoffset: -395;
   }
 
-  86%,
-  to {
+  86%, to {
     stroke-dasharray: 0 440;
     stroke-width: 20;
     stroke-dashoffset: -440;
   }
 }
 
-#preloader {
+#preloader{
   background-color: #ffffff;
   height: 100vh;
   width: 100%;
@@ -5355,7 +5339,6 @@ ul {
   position: relative;
   width: 400px;
   height: 270px;
-  margin: 40px auto 0;
   background-image: url('http://www.imgbase.info/images/safe-wallpapers/digital_art/1_miscellaneous_digital_art/41750_1_miscellaneous_digital_art_simple_dark_shapes.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
