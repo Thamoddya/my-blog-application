@@ -64,22 +64,13 @@ $PageName = "Blog Home ";
             </div>
     </section>
 
-    <div class="parent-wrapper">
-        <span class="close-btn glyphicon glyphicon-remove"></span>
-        <div class="subscribe-wrapper">
-            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-            <input type="email" name="email" class="subscribe-input" placeholder="Your e-mail">
-            <div class="submit-btn">SUBMIT</div>
-        </div>
-    </div>
+    <?php
+    include_once "./components/newsletter.component.php";
+    ?>
 
 
-    <!-- Music Area -->
-    <div class="containerAnimate">
-        <?php
-        include_once "./layouts/Home/musicArea.home.php";
-        ?>
-    </div>
+
+  
 
     <!-- ============= AD CAMPAIGN ============= -->
     <div class="container mt-2">
@@ -145,7 +136,6 @@ $PageName = "Blog Home ";
                     <div class="sidebar-widget">
                         <div class="gradient-bar mb-30"></div>
                         <!-- Cat item -->
-
                         <?php
                         include_once "./layouts/Home/engagedPostpreviewPost.home.php";
                         ?>
@@ -203,6 +193,41 @@ $PageName = "Blog Home ";
     include_once "./components/body.imports.php";
     ?>
 
+    <script>
+        const newsletterSubmit = () => {
+            let email = $('#newsletterEmail').val();
+            $('#newsletterButton').addClass('d-none');
+            $('#newsletterLoader').removeClass('d-none');
+
+            let formdata = new FormData();
+            formdata.append('email', email);
+
+            $.ajax({
+                type: 'POST',
+                url: './process/addToNewsletter.process.php',
+                data: formdata,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'success') {
+                        $('#newsletterLoader').addClass('d-none');
+                        $('#newsletterButton').removeClass('d-none');
+                        $('#newsletterButton').html('Sent');
+                        $('#newsletterButton').prop('disabled', true);
+                        
+                    } 
+                    // else {
+                    //     $('#button').removeClass('d-none');
+                    //     $('#button').html(`Email ${response}`);
+                    //     $('#button').prop('disabled', true);
+                    //     $('#loader').addClass('d-none');
+                    // }
+                }
+            });
+
+        }
+    </script>
 </body>
 
 </html>
