@@ -86,3 +86,11 @@ navLinks.forEach(navLink => {
     navLink.classList.add('active');
   });
 });
+
+(function($) {
+
+	"use strict";
+
+	$('[data-toggle="tooltip"]').tooltip()
+
+})(jQuery);
