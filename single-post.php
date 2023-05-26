@@ -25,15 +25,15 @@ if ($getBlogDataSQLQuery->rowCount() > 0) {
 }
 
 // Check if session variable has been set for this post ID
-if(!isset($_SESSION['viewed_post_'.$postID])) {
-  
-  // Increment view count in database
-  $updateViewCount = $connection->prepare("UPDATE postviews SET viewCount = viewCount + 1 WHERE postID = :postID");
-  $updateViewCount->bindValue(':postID', $postID);
-  $updateViewCount->execute();
-  
-  // Set session variable to indicate that user has viewed this post
-  $_SESSION['viewed_post_'.$postID] = true;
+if (!isset($_SESSION['viewed_post_' . $postID])) {
+
+    // Increment view count in database
+    $updateViewCount = $connection->prepare("UPDATE postviews SET viewCount = viewCount + 1 WHERE postID = :postID");
+    $updateViewCount->bindValue(':postID', $postID);
+    $updateViewCount->execute();
+
+    // Set session variable to indicate that user has viewed this post
+    $_SESSION['viewed_post_' . $postID] = true;
 }
 
 $PageName = $allPostData['postTitle'];
@@ -54,9 +54,9 @@ $PageName = $allPostData['postTitle'];
 </head>
 
 <body>
- 
+
     <?php
-        include_once "./components/preloader.component.php";
+    include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
     ?>
 
@@ -240,7 +240,7 @@ $PageName = $allPostData['postTitle'];
                         ?>
 
                         <!-- Widget add banner -->
-                        <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.gif')">
+                        <div class="widget-ad-banner bg-cover" style="background-image: url('assets/img/blog/sidebar-add-banner.png')">
                             <div class="content">
                                 <a href="https://thamo.ga/" class="button icon-button active ">
                                     <span>

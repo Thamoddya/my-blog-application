@@ -3,7 +3,7 @@ session_start();
 if (empty($_SESSION['adminEmail'])) {
     header('Location: ./adminLogin.php');
 }
-
+include_once "../connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -99,74 +99,38 @@ if (empty($_SESSION['adminEmail'])) {
                             <div class="table-wrap">
                                 <table class="tableBlog table-responsive-xl">
                                     <tbody>
-                                        <tr class="alert" role="alert">
-                                            <td>
-                                                <label class="checkbox-wrap checkbox-primary">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td class="d-flex align-items-center">
-                                                <div class="img" style="background-image: url(uploads/blogUpload/blog-img.jpg);"></div>
-                                                <div class="pl-2 email">
-                                                    <span>Network Engineering News: The Latest Developments in the Field</span>
-                                                    <span class="text-white-50">Added: 01/03/2023</span>
-                                                </div>
-                                            </td>
-                                            <td>Markotto89</td>
-                                            <td class="status"><span class="active"><i class="bi bi-eye"></i> 52</span></td>
-                                        </tr>
-                                        <tr class="alert" role="alert">
-                                            <td>
-                                                <label class="checkbox-wrap checkbox-primary">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td class="d-flex align-items-center">
-                                                <div class="img" style="background-image: url(uploads/blogUpload/blog-img.jpg);"></div>
-                                                <div class="pl-2 email">
-                                                    <span>Network Engineering News: The Latest Developments in the Field</span>
-                                                    <span class="text-white-50">Added: 01/03/2023</span>
-                                                </div>
-                                            </td>
-                                            <td>Markotto89</td>
-                                            <td class="status"><span class="active"><i class="bi bi-eye"></i> 52</span></td>
-                                        </tr>
-                                        <tr class="alert" role="alert">
-                                            <td>
-                                                <label class="checkbox-wrap checkbox-primary">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td class="d-flex align-items-center">
-                                                <div class="img" style="background-image: url(uploads/blogUpload/blog-img.jpg);"></div>
-                                                <div class="pl-2 email">
-                                                    <span>Network Engineering News: The Latest Developments in the Field</span>
-                                                    <span class="text-white-50">Added: 01/03/2023</span>
-                                                </div>
-                                            </td>
-                                            <td>Markotto89</td>
-                                            <td class="status"><span class="active"><i class="bi bi-eye"></i> 52</span></td>
-                                        </tr>
-                                        <tr class="alert" role="alert">
-                                            <td>
-                                                <label class="checkbox-wrap checkbox-primary">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td class="d-flex align-items-center">
-                                                <div class="img" style="background-image: url(uploads/blogUpload/blog-img.jpg);"></div>
-                                                <div class="pl-2 email">
-                                                    <span>Network Engineering News: The Latest Developments in the Field</span>
-                                                    <span class="text-white-50">Added: 01/03/2023</span>
-                                                </div>
-                                            </td>
-                                            <td>Markotto89</td>
-                                            <td class="status"><span class="active"><i class="bi bi-eye"></i> 52</span></td>
-                                        </tr>
+                                        <?php
+                                        $getMainBlogData = $connection->prepare("SELECT * FROM allblogs INNER JOIN postviews ON allblogs.postID = postviews.postID ORDER BY postviews.viewCount DESC LIMIT 4");
+                                        $getMainBlogData->execute();
+                                        while ($mainBlogData = $getMainBlogData->fetch()) {
+                                        ?>
+                                            <tr class="alert" role="alert">
+                                                <td>
+                                                    <label class="checkbox-wrap checkbox-primary">
+                                                        <input type="checkbox" checked>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td class="d-flex align-items-center">
+                                                    <div class="img" style="background-image: url(uploads/blogUpload/<?php echo $mainBlogData['postImage'] ?>);"></div>
+                                                    <div class="pl-2 mx-1 email">
+                                                        <span><?php echo $mainBlogData['postTitle']; ?></span>
+                                                        <span class="text-white-50">Added: <?php
+                                                                                            $BlofAddedTimeMySql = $mainBlogData['addedTime'];
+                                                                                            $BlogAddedTime = new DateTime($BlofAddedTimeMySql);
+                                                                                            $formattedDatetime = $BlogAddedTime->format('d/m/Y');
+                                                                                            echo $formattedDatetime; 
+                                                                                            ?></span>
+                                                    </div>
+                                                </td>
+                                                <td><?php echo $mainBlogData['tagName']; ?></td>
+                                                <td class="status"><span class="active"><i class="bi bi-eye"></i> <?php echo $mainBlogData['viewCount']; ?></span></td>
+                                            </tr>
+
+                                        <?php
+                                        }
+                                        ?>
+
                                     </tbody>
                                 </table>
                             </div>
