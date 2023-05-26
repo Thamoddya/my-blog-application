@@ -39,7 +39,7 @@ if (empty($_SESSION['adminEmail'])) {
                         <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav mx-auto ">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active " aria-current="page" href="#">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link " href="#">Analytics</a>
@@ -67,31 +67,34 @@ if (empty($_SESSION['adminEmail'])) {
             </div>
         </div>
     </div>
-    <div class="container-fluid ">
+    <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-md-4 ">
                 <table class="table table-bordered border-primary">
                     <tbody>
                         <tr>
-                            <td class="table-active text-white text-center ">Larry the Bird</td>
-                            <td class="table-active text-white text-center ">Larry the Bird</td>
+                            <td class="table-active text-white text-center "><i class="bi bi-eye-fill"></i> 50</td>
+                            <td class="table-active text-white text-center "><i class="bi bi-file-earmark-font"></i> 30</td>
                         </tr>
                         <tr>
-                            <td class="table-active text-white text-center ">Larry the Bird</td>
-                            <td class="table-active text-white text-center ">Larry the Bird</td>
+                            <td class="table-active text-white text-center "><i class="bi bi-file-person-fill"></i> 12</td>
+                            <td class="table-active text-white text-center "><i class="bi bi-person-circle"></i> 15 </td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div class="row mt-2">
+
+                    <div class="col-12">
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
-
-
-
-
-
-
-
 
 
     <?php

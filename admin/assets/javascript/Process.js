@@ -47,3 +47,42 @@ const loginError = (response) => {
     $("#errorDetails").html(`Message: ${response.message} || Error: ${response.error}`);
     $("#errorDetails").removeClass().addClass("alert alert-danger");
 };
+
+
+
+const ctx = document.getElementById('myChart');
+const data = {
+    labels: [
+        'Blog Count',
+        'Blog View Count',
+        'Visit Count',
+        'Registed Count',
+
+    ],
+    datasets: [{
+        label: 'Blog Dataset',
+        data: [11, 16, 20, 3],
+        backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+            'rgb(255, 205, 86)',
+            'rgb(201, 203, 207)',
+        ]
+    }]
+};
+
+new Chart(ctx, {
+    type: 'polarArea',
+    data: data,
+    options: {}
+});
+
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', () => {
+    navLinks.forEach(link => link.classList.remove('active'));
+    navLink.classList.add('active');
+  });
+});

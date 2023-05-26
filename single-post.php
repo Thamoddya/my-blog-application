@@ -24,13 +24,6 @@ if ($getBlogDataSQLQuery->rowCount() > 0) {
     exit();
 }
 
-// $updateViewCount = $connection->prepare("UPDATE postviews SET viewCount = :viewCount WHERE postID = :postID");
-// $viewCount = $allPostData['viewCount'] + 1;
-// $updateViewCount->bindValue(':viewCount', $viewCount);
-// $updateViewCount->bindValue(':postID', $postID);
-// $updateViewCount->execute();
-
-
 // Check if session variable has been set for this post ID
 if(!isset($_SESSION['viewed_post_'.$postID])) {
   
@@ -43,9 +36,7 @@ if(!isset($_SESSION['viewed_post_'.$postID])) {
   $_SESSION['viewed_post_'.$postID] = true;
 }
 
-
 $PageName = $allPostData['postTitle'];
-
 
 ?>
 <!DOCTYPE html>
@@ -55,7 +46,7 @@ $PageName = $allPostData['postTitle'];
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thamoddya Rashmitha - <?php echo $PageName ?></title>
+    <title><?php echo $PageName ?></title>
 
     <?php
     include_once "./components/head.imports.php";
