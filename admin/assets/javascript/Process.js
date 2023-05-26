@@ -87,3 +87,36 @@ navLinks.forEach(navLink => {
     $('[data-toggle="tooltip"]').tooltip()
 
 })(jQuery);
+
+const createPost = () => {
+    var postTitle = $("#postTitle").val();
+    var postImage = $("#postImage")[0].files[0]; // Assuming you're uploading a single file
+    var postAuthor = $("#postAuthor").val();
+    var postDisplayData = $("#postDisplayData").val();
+    var posttagName = $("#posttagName").val();
+    var postCategory = $("#postCategory").val();
+
+    // Create a FormData object to send the data
+    var formData = new FormData();
+    formData.append("postTitle", postTitle);
+    formData.append("postImage", postImage);
+    formData.append("postAuthor", postAuthor);
+    formData.append("postDisplayData", postDisplayData);
+    formData.append("posttagName", posttagName);
+    formData.append("postCategory", postCategory);
+
+    // Send the request
+    $.ajax({
+        url: './uploads/createPost.validate.php',
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (xhr, status, error) {
+            console.error("Error: " + xhr.status);
+        }
+    });
+}

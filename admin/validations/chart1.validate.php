@@ -16,7 +16,10 @@ $getTrafficCount->execute();
 $getTrafficCountGET = $getTrafficCount->fetch();
 $TrafficCount = $getTrafficCountGET['count'];
 
-
+$GetRegistedToNewslettterCount = $connection->prepare("SELECT COUNT(Email) FROM newsletter");
+$GetRegistedToNewslettterCount->execute();
+$GetRegistedToNewslettterCountGET = $GetRegistedToNewslettterCount->fetch();
+$RegistedToNewslettterCount = $GetRegistedToNewslettterCountGET['COUNT(Email)'];
 
 
 $data = array(
@@ -24,7 +27,7 @@ $data = array(
     'datasets' => array(
         array(
             'label' => 'Blog Dataset',
-            'data' => [$blogCount, $BlogViewCount, $TrafficCount, 4],
+            'data' => [$blogCount, $BlogViewCount, $TrafficCount, $RegistedToNewslettterCount],
             'backgroundColor' => [
                 'rgb(255, 99, 132)',
                 'rgb(75, 192, 192)',

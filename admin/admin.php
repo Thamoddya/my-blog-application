@@ -20,53 +20,11 @@ include_once "../connection.php";
 </head>
 
 <body class="bg-dark">
+    <?php
+    include_once "./components/navbar.admin.php";
+    ?>
 
-    <div class="container-fluid ">
-        <div class="row">
-            <div class="col-12 position-relative">
-                <div id="mainNavigation">
-                    <nav role="navigation">
-                        <div class="py-3 text-center border-bottom">
-                            <img src="./assets/images/Knowladge Addict new Logo 1.png" alt="" class="invert">
-                        </div>
-                    </nav>
-                    <div class="navbar-expand-md">
-                        <div class="navbar-dark text-center my-2">
-                            <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
-                            </button>
-                        </div>
-                        <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav mx-auto ">
-                                <li class="nav-item">
-                                    <a class="nav-link active " aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="#">Analytics</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Client</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Manage</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        More
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Portfolio</a></li>
-                                        <li><a class="dropdown-item" href="#">About Us</a></li>
-                                        <li><a class="dropdown-item" href="#">Header</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-md-4 ">
@@ -85,6 +43,41 @@ include_once "../connection.php";
                 <?php
                 include_once "./components/table.admin.component.php";
                 ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="postTitle" class="form-label text-white">POST TITLE</label>
+                    <input type="text" class="form-control" id="postTitle" placeholder="POST TITLE">
+                </div>
+                <div class="input-group mb-1">
+                    <label class="input-group-text" for="inputGroupFile01">POST IMAGE (1320*750)</label>
+                    <input type="file" class="form-control" id="postImage">
+                </div>
+                <div class="mb-1">
+                    <label for="postAuthor" class="form-label text-white">POST AUTHOR</label>
+                    <input type="text" class="form-control" id="postAuthor" placeholder="POST AUTHOR">
+                </div>
+                <div class="mb-1">
+                    <label for="postDisplayData" class="form-label text-white">POST DISPLAY DATA</label>
+                    <textarea class="form-control" id="postDisplayData" rows="3"></textarea>
+                </div>
+                <div class="mb-1">
+                    <label for="posttagName" class="form-label text-white">TAG NAME</label>
+                    <input type="text" class="form-control" id="posttagName" placeholder="POST TAG NAME">
+                </div>
+                <select class="form-select" aria-label="Default select example" id="postCategory">
+                    <option selected disabled>POST CATEGORY</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+                <button class="btn btn-primary col-12 my-2" onclick="createPost();" >UPLOAD</button>
             </div>
         </div>
     </div>

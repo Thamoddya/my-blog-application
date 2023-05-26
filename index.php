@@ -15,20 +15,15 @@ $PageName = "Blog Home ";
     <?php
     include_once "./components/head.imports.php";
     include_once "./components/viewTraffic.component.php";
-
     ?>
 </head>
 
 <body>
-
-
     <?php
     include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
     include_once "./layouts/Home/hero.home.php";
     ?>
-
-
     <!-- ============= FEATURED TOPICS ============= -->
     <section class="featured-topics-wrapper section-padding">
         <div class="container">
@@ -43,11 +38,9 @@ $PageName = "Blog Home ";
             </div>
             <div class="row gy-5 ">
                 <div class="col-lg-9 left-content">
-
                     <?php
                     include_once "./layouts/Home/lastestTopics.home.php";
                     ?>
-
                 </div>
                 <div class="col-lg-3">
                     <div class="featured-topic-slidebar">
@@ -79,8 +72,6 @@ $PageName = "Blog Home ";
             </div>
         </div>
     </div>
-
-
 
     <!-- ============= AD CAMPAIGN ============= -->
     <div class="container mt-2">
