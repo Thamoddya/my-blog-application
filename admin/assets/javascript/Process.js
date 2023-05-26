@@ -24,6 +24,23 @@ const validateAdmin = () => {
 const loginSuccess = (response) => {
     $("#errorDetails").html(`Message: ${response.message}`);
     $("#errorDetails").removeClass().addClass("alert alert-success");
+
+    swal({
+        title: `Message: ${response.message}`,
+        text: "Go to Admin Page",
+        icon: "success",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                window.location.href = './admin.php';
+                ;
+            } else {
+                swal("Refresh and try again!");
+            }
+        });
+
 };
 
 const loginError = (response) => {
