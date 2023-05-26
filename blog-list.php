@@ -15,6 +15,7 @@ $PageName = "All Blog List";
 
     <?php
     include_once "./components/head.imports.php";
+    include_once "./components/viewTraffic.component.php";
     ?>
 </head>
 

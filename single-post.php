@@ -6,7 +6,7 @@ if (empty($postID)) {
     header('Location: ./index.php');
     exit();
 };
-
+include_once "./components/viewTraffic.component.php";
 include_once "./connection.php";
 
 $getDataSQLQuery = $connection->prepare("SELECT * FROM allblogs INNER JOIN category ON category.id = allblogs.categoryID INNER JOIN postviews ON postviews.postID = allblogs.postID WHERE allblogs.postID = :postID");
