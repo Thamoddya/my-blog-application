@@ -121,7 +121,6 @@ $PageName = "Blog Home ";
         </div>
     </section>
 
-
     <!-- ============= DISCUSSED POST ============= -->
     <section class="discussed-post-wrapper section-padding">
         <div class="container">
