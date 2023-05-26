@@ -4,6 +4,8 @@ require "../include/PHPMailer.php";
 require "../include/SMTP.php";
 require "../include/Exception.php";
 
+include_once "../connection.php";
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -22,8 +24,24 @@ if (!empty($errors)) {
     exit;
 }
 
-class EmailTemplate {
-    public static function EmailFormat($email) {
+$checkEmailQuery = $connection->prepare("SELECT COUNT(*) FROM `newsletter` WHERE `Email` = :Email");
+$checkEmailQuery->bindValue(':Email', $email);
+$checkEmailQuery->execute();
+
+$emailExists = $checkEmailQuery->fetchColumn();
+
+if ($emailExists) {
+} else {
+    $addEmailToDatabase = $connection->prepare("INSERT INTO newsletter (Email) VALUES (:Email)");
+    $addEmailToDatabase->bindValue(':Email', $email);
+    $addEmailToDatabase->execute();
+}
+
+
+class EmailTemplate
+{
+    public static function EmailFormat($email)
+    {
         return "
         <html>
         <head>
@@ -82,7 +100,6 @@ class EmailTemplate {
 }
 
 
-
 $mail = new PHPMailer;
 $mail->IsSMTP();
 $mail->Host = 'smtp.gmail.com';
@@ -100,7 +117,7 @@ $mail->Body = EmailTemplate::EmailFormat($email);
 
 $mail->send();
 
-if ($mail->send()) { 
+if ($mail->send()) {
     echo "success";
 } else {
     echo "Error: " . $mail->ErrorInfo;

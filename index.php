@@ -68,8 +68,6 @@ $PageName = "Blog Home ";
     include_once "./components/newsletter.component.php";
     ?>
 
-
-
   
 
     <!-- ============= AD CAMPAIGN ============= -->
