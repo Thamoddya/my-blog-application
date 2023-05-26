@@ -21,6 +21,7 @@ $PageName = "Blog Home ";
 
 <body>
 
+
     <?php
     include_once "./components/preloader.component.php";
     include_once "./components/navbar.component.php";
@@ -62,6 +63,16 @@ $PageName = "Blog Home ";
                 </div>
             </div>
     </section>
+
+    <div class="parent-wrapper">
+        <span class="close-btn glyphicon glyphicon-remove"></span>
+        <div class="subscribe-wrapper">
+            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+            <input type="email" name="email" class="subscribe-input" placeholder="Your e-mail">
+            <div class="submit-btn">SUBMIT</div>
+        </div>
+    </div>
+
 
     <!-- Music Area -->
     <div class="containerAnimate">
@@ -109,6 +120,7 @@ $PageName = "Blog Home ";
             </div>
         </div>
     </section>
+
 
     <!-- ============= DISCUSSED POST ============= -->
     <section class="discussed-post-wrapper section-padding">
@@ -185,6 +197,7 @@ $PageName = "Blog Home ";
             </div>
         </div>
     </section>
+
 
     <?php
     include_once "./components/footer.component.php";

@@ -48,49 +48,42 @@ const loginError = (response) => {
     $("#errorDetails").removeClass().addClass("alert alert-danger");
 };
 
+var data = {};
+$.ajax({
+    url: './validations/chart1.validate.php',
+    type: 'POST',
+    dataType: 'json',
+    success: function (response) {
 
+        data.labels = response.labels;
+        data.datasets = response.datasets;
 
-const ctx = document.getElementById('myChart');
-const data = {
-    labels: [
-        'Blog Count',
-        'Blog View Count',
-        'Visit Count',
-        'Registed Count',
-
-    ],
-    datasets: [{
-        label: 'Blog Dataset',
-        data: [11, 16, 20, 3],
-        backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(75, 192, 192)',
-            'rgb(255, 205, 86)',
-            'rgb(201, 203, 207)',
-        ]
-    }]
-};
-
-new Chart(ctx, {
-    type: 'polarArea',
-    data: data,
-    options: {}
+        const ctx = document.getElementById('mainPageDetailChart');
+        new Chart(ctx, {
+            type: 'polarArea',
+            data: data,
+            options: {}
+        });
+    },
+    error: function (xhr, status, error) {
+        console.log('AJAX request error:', error);
+    }
 });
 
 
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(navLink => {
-  navLink.addEventListener('click', () => {
-    navLinks.forEach(link => link.classList.remove('active'));
-    navLink.classList.add('active');
-  });
+    navLink.addEventListener('click', () => {
+        navLinks.forEach(link => link.classList.remove('active'));
+        navLink.classList.add('active');
+    });
 });
 
-(function($) {
+(function ($) {
 
-	"use strict";
+    "use strict";
 
-	$('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip()
 
 })(jQuery);
