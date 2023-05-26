@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once "./connection.php";
 $PageName = "Blog Home ";
 ?>
 <!DOCTYPE html>
@@ -9,11 +10,12 @@ $PageName = "Blog Home ";
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- =============== PAGE TITLE =============== -->
     <title>Thamoddya Rashmitha - <?php echo $PageName ?></title>
 
     <?php
     include_once "./components/head.imports.php";
+    include_once "./components/viewTraffic.component.php";
+
     ?>
 </head>
 
