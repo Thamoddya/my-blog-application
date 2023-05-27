@@ -13,4 +13,3 @@ try {
     echo "Error connecting to database: " . $e->getMessage();
     exit();
 }
-//Testing function
