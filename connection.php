@@ -1,5 +1,6 @@
 <?php
-
+// $connection = new mysqli('localhost','root','1234','myblog');
+// $connection = new PDO("mysqli:host=localhost;dbname=myblog", "root", "1234");
 
 $dsn = "mysql:host=localhost;dbname=myblog;charset=utf8mb4";
 $username = "root";
