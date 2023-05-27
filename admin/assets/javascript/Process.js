@@ -185,3 +185,20 @@ const addPostData = () => {
             console.error('Error in sending data', error);
         });
 }
+
+const sendEmail = ()=>{
+    $.ajax({
+        url: './validations/sendEmailNotify.validate.php',
+        type: "POST",
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            console.log(response);
+
+            0
+        },
+        error: function (xhr, status, error) {
+            console.error("Error: " + xhr.status);
+        }
+    });
+}

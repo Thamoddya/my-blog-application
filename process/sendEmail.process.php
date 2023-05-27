@@ -42,6 +42,7 @@ $mail->Username = 'thamoddya.smtp@gmail.com';
 $mail->Password = 'vfpornoftoayuwgf';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
+
 $mail->setFrom('thamoddya.smtp@gmail.com', 'KNOWLADGE ADDICT');
 $mail->addReplyTo($email, $name);
 $mail->addAddress("thamoddyarashmithadissanayake@gmail.com");
