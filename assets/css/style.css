@@ -1782,9 +1782,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Advent Pro", sans-serif;
+  
   margin: 0px;
-  font-weight: 600;
+  font-weight: 100;
   color: #000;
 }
 
@@ -2335,7 +2335,6 @@ p {
   font-size: 48px;
   font-weight: 600;
   line-height: 57px;
-  font-family: "Advent Pro", sans-serif;
   color: #222222;
   text-transform: capitalize;
 }
@@ -2350,7 +2349,6 @@ p {
 .heading-secondary {
   font-size: 30px;
   line-height: 39px;
-  font-family: "Advent Pro", sans-serif;
   color: #222222;
 }
 
@@ -2510,7 +2508,6 @@ p {
   font-size: 20px;
   font-weight: 600;
   color: #222222;
-  font-family: "Advent Pro", sans-serif;
   line-height: 26px;
 }
 
@@ -2786,7 +2783,6 @@ p {
 }
 
 .c-bredcrumb li a {
-  font-family: "Advent Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #3d5b7d;
@@ -4076,7 +4072,6 @@ p {
 .recent-post-wrapper .main-post-card .card-meta .meta-item .author-name {
   font-size: 16px;
   font-weight: 600;
-  font-family: "Advent Pro", sans-serif;
   color: #222222;
 }
 
@@ -4136,8 +4131,7 @@ p {
   transform: translateY(-50%);
 }
 
-.blog-list-wrapper .c-bredcrumb li a {
-  font-family: "Advent Pro", sans-serif;
+.blog-list-wrapper .c-bredcrumb li a {  
   font-size: 16px;
   font-weight: 400;
   color: #3d5b7d;
@@ -4268,7 +4262,6 @@ p {
 .blog-list-wrapper .left-content .card-meta .meta-item .author-name {
   font-size: 16px;
   font-weight: 600;
-  font-family: "Advent Pro", sans-serif;
   color: #222222;
 }
 
@@ -4405,7 +4398,6 @@ p {
   font-size: 20px;
   font-weight: 600;
   color: #222222;
-  font-family: "Advent Pro", sans-serif;
 }
 
 .single-post-wrapper .post-quote .quote-bottom {
@@ -4553,7 +4545,6 @@ p {
   font-size: 14px;
   font-weight: 600;
   color: #222222;
-  font-family: "Advent Pro", sans-serif;
   text-transform: uppercase;
 }
 
