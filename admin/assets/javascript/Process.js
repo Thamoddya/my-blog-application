@@ -194,8 +194,6 @@ const sendEmail = ()=>{
         contentType: false,
         success: function (response) {
             console.log(response);
-
-            0
         },
         error: function (xhr, status, error) {
             console.error("Error: " + xhr.status);
