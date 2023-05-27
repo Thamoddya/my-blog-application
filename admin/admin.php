@@ -49,36 +49,12 @@ include_once "../connection.php";
 
     <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="postTitle" class="form-label text-white">POST TITLE</label>
-                    <input type="text" class="form-control" id="postTitle" placeholder="POST TITLE">
-                </div>
-                <div class="input-group mb-1">
-                    <label class="input-group-text" for="inputGroupFile01">POST IMAGE (1320*750)</label>
-                    <input type="file" class="form-control" id="postImage">
-                </div>
-                <div class="mb-1">
-                    <label for="postAuthor" class="form-label text-white">POST AUTHOR</label>
-                    <input type="text" class="form-control" id="postAuthor" placeholder="POST AUTHOR">
-                </div>
-                <div class="mb-1">
-                    <label for="postDisplayData" class="form-label text-white">POST DISPLAY DATA</label>
-                    <textarea class="form-control" id="postDisplayData" rows="3"></textarea>
-                </div>
-                <div class="mb-1">
-                    <label for="posttagName" class="form-label text-white">TAG NAME</label>
-                    <input type="text" class="form-control" id="posttagName" placeholder="POST TAG NAME">
-                </div>
-                <select class="form-select" aria-label="Default select example" id="postCategory">
-                    <option selected disabled>POST CATEGORY</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
 
-                <button class="btn btn-primary col-12 my-2" onclick="createPost();" >UPLOAD</button>
-            </div>
+            <?php
+            include_once "./screens/postAdd.screen.php";
+            include_once "./screens/postDataAdd.screen.php";
+            ?>
+
         </div>
     </div>
 

@@ -89,6 +89,11 @@ navLinks.forEach(navLink => {
 })(jQuery);
 
 const createPost = () => {
+
+    $('#postUploadButton').addClass('d-none');
+    $('#postUploadLoader').removeClass('d-none');
+
+
     var postTitle = $("#postTitle").val();
     var postImage = $("#postImage")[0].files[0]; // Assuming you're uploading a single file
     var postAuthor = $("#postAuthor").val();
@@ -114,9 +119,69 @@ const createPost = () => {
         contentType: false,
         success: function (response) {
             console.log(response);
+
+            if (response == 'Success') {
+                $('#postUploadLoader').addClass('d-none');
+                $('#postUploadButton').removeClass('d-none');
+                $('#postUploadButton').html('Upload Successful');
+                $('#postUploadButton').prop('disabled', true);
+            } else {
+                $('#postUploadButton').removeClass('d-none');
+                $('#postUploadButton').html('Error Uploading');
+                $('#postUploadButton').prop('disabled', true);
+                $('#postUploadLoader').addClass('d-none');
+            }
         },
         error: function (xhr, status, error) {
             console.error("Error: " + xhr.status);
         }
     });
+}
+
+const addPostData = () => {
+    $('#postALLUploadButton').addClass('d-none');
+    $('#postALLUploadLoader').removeClass('d-none');
+
+    // Get the form inputs
+    var postID = document.getElementById('postID').value;
+    var paragraph1 = document.getElementById('postParagaphOne').value;
+    var paragraph2 = document.getElementById('postParagaphTwo').value;
+    var paragraph3 = document.getElementById('postParagaphThree').value;
+    var conclusion = document.getElementById('postConclution').value;
+    var quote = document.getElementById('postQUote').value;
+    var quoteAuthor = document.getElementById('postQUoteAuthor').value;
+    var otherImage1 = document.getElementById('postOtherImageOne').files[0];
+    var otherImage2 = document.getElementById('postOtherImageTwo').files[0];
+
+    // Create a FormData object to send the data
+    var formData = new FormData();
+    formData.append('postID', postID);
+    formData.append('paragraph1', paragraph1);
+    formData.append('paragraph2', paragraph2);
+    formData.append('paragraph3', paragraph3);
+    formData.append('conclusion', conclusion);
+    formData.append('quote', quote);
+    formData.append('quoteAuthor', quoteAuthor);
+    formData.append('otherImage1', otherImage1);
+    formData.append('otherImage2', otherImage2);
+
+
+    fetch('./uploads/uploadPostAll.validate.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => {
+            console.log(response);
+            if (response.ok) {
+                $('#postALLUploadLoader').addClass('d-none');
+                $('#postALLUploadButton').removeClass('d-none');
+                $('#postALLUploadButton').html('Successful');
+                $('#postALLUploadButton').prop('disabled', true);
+            } else {
+                throw new Error('Error in sending data');
+            }
+        })
+        .catch(error => {
+            console.error('Error in sending data', error);
+        });
 }
