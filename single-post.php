@@ -46,6 +46,8 @@ $PageName = $allPostData['postTitle'];
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thamoddya Rashmitha Blog - Knowledge Addict">
+    <meta name="keywords" content="Thamoddya, Rashmitha, Blog,Knowledge,Addict, Science Blog, Technology Blog, Java Institute,Latest Post,Blog Post">
     <title><?php echo $PageName ?></title>
     <meta name="description" content="<?php echo $PageName ?>">
 

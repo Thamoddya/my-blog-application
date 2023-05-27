@@ -11,7 +11,8 @@ $PageName = "Contact page";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- =============== PAGE TITLE =============== -->
     <title>Thamoddya Rashmitha - <?php echo $PageName ?></title>
-
+    <meta name="description" content="Thamoddya Rashmitha Blog - Knowledge Addict">
+    <meta name="keywords" content="Thamoddya, Rashmitha, Blog,  Knowledge,Addict,Science Blog, Technology Blog, Java Institute,Latest Post,Blog Post,Contact Us">
     <?php
     include_once "./components/head.imports.php";
     ?>
