@@ -2,7 +2,7 @@
 
 define('ROOT_PATH', realpath(dirname(__FILE__)));
 require_once(ROOT_PATH . '/../../connection.php');
-$stmt = $connection->prepare("SELECT * FROM homeheaderpost INNER JOIN postviews ON postviews.postID = homeheaderpost.postID LIMIT :limitNumber");
+$stmt = $connection->prepare("SELECT * FROM allblogs INNER JOIN postviews ON allblogs.postID = postviews.postID ORDER BY allblogs.id DESC LIMIT :limitNumber");
 $stmt->bindValue(":limitNumber", 3, PDO::PARAM_INT);
 $stmt->execute();
 ?>
@@ -12,7 +12,7 @@ $stmt->execute();
         for ($headerRows = 0; $headerRows < $stmt->rowCount(); $headerRows++) {
             $gotDataForheader = $stmt->fetch();
         ?>
-            <div class="slider-item bg-cover" style="background-image: url('admin/uploads/headerArea/<?php echo $gotDataForheader['postImage'] ?>')">
+            <div class="slider-item bg-cover" style="background-image: url('admin/uploads/blogUpload/<?php echo $gotDataForheader['postImage'] ?>')">
                 <div class="container">
                     <div class="hero-content">
                         <div></div>
