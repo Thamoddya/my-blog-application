@@ -13,3 +13,4 @@ try {
     echo "Error connecting to database: " . $e->getMessage();
     exit();
 }
+//Test thie connection and ignore
