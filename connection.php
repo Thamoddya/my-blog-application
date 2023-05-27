@@ -1,10 +1,8 @@
 <?php
-// $connection = new mysqli('localhost','root','1234','myblog');
-// $connection = new PDO("mysqli:host=localhost;dbname=myblog", "root", "1234");
 
-$dsn = "mysql:host=localhost;dbname=myblog;charset=utf8mb4";
-$username = "root";
-$password = "1234";
+$dsn = "mysql:host=us100.srilankahosting.com;dbname=thamoddy_blog;chars=utf8mb4";
+$username = "thamoddy_root";
+$password = "ThamoddyaRashmitha1234@";
 
 try {
     $connection = new PDO($dsn, $username, $password);
@@ -13,4 +11,3 @@ try {
     echo "Error connecting to database: " . $e->getMessage();
     exit();
 }
-//Check the ignor
