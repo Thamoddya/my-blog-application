@@ -61,9 +61,9 @@ include_once "../connection.php";
 
     <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-md-6">
-                <button onclick="sendEmail();">Send Test Email</button>
-            </div>
+            <?php
+            include_once "./screens/sendNotifyEmail.screen.php";
+            ?>
         </div>
 
     </div>

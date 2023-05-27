@@ -8,14 +8,15 @@ require '../../include/Exception.php';
 require '../../include/PHPMailer.php';
 require '../../include/SMTP.php';
 
-$postID = '21451';
-$date = "May 27 2023";
-$postTitle = 'The Fascinating World Of Laboratory Flasks: A Closer Look';
+$postID = $_POST['NotifyPost'];
+$date = $_POST['NotifyPostDate'];
+$postTitle = $_POST['NotifyPostTitle'];
+
 
 include_once "../../connection.php";
 
 // Retrieve email addresses from the database
-$getEmailsQuery = $connection->query("SELECT Email FROM newsletter");
+$getEmailsQuery = $connection->query("SELECT `Email` FROM newsletter");
 $emails = $getEmailsQuery->fetchAll(PDO::FETCH_COLUMN);
 
 class EmailTemplate2
@@ -347,9 +348,10 @@ foreach ($emails as $email) {
         // Clear recipients for the next iteration
         $mail->clearAddresses();
 
-        echo "Email sent to: " . $email ;
+        
     } catch (Exception $e) {
         echo "Error sending email to: " . $email . ". Error message: " . $mail->ErrorInfo . "<br>";
     }
 }
+echo "Success";
 ?>

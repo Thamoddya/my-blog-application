@@ -186,14 +186,38 @@ const addPostData = () => {
         });
 }
 
-const sendEmail = ()=>{
+const sendEmail = () => {
+
+    $('#notifyEmailButton').addClass('d-none');
+    $('#notifyEmailLoader').removeClass('d-none');
+
+    let NotifyPost = $("#NotifyPost").val();
+    let NotifyPostTitle = document.querySelector("#NotifyPost option:checked").getAttribute('data-bs-info');
+    let postDate = $("#NotifyPostDate").val();
+
+    const formData = new FormData();
+    formData.append('NotifyPost', NotifyPost);
+    formData.append('NotifyPostTitle', NotifyPostTitle);
+    formData.append('NotifyPostDate', postDate);
+
     $.ajax({
         url: './validations/sendEmailNotify.validate.php',
         type: "POST",
+        data: formData,
         processData: false,
         contentType: false,
         success: function (response) {
             console.log(response);
+            if (response == 'Success') {
+                $('#notifyEmailLoader').addClass('d-none');
+                $('#notifyEmailButton').removeClass('d-none');
+                $('#notifyEmailButton').html('Upload Successful');
+                $('#notifyEmailButton').prop('disabled', true);
+            } else {
+                $('#notifyEmailButton').removeClass('d-none');
+                $('#notifyEmailButton').html('Error Uploading');
+                $('#notifyEmailLoader').addClass('d-none');
+            }
         },
         error: function (xhr, status, error) {
             console.error("Error: " + xhr.status);
