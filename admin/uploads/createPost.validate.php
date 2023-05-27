@@ -29,21 +29,23 @@ if (empty($postTitle) || empty($postAuthor) || empty($postDisplayData) || empty(
     $stmt->bindValue(6, $posttagName);
     $stmt->bindValue(7, $postCategory);
 
-    $stmt2->$connection->prepare("INSERT INTO postviews(postID,viewCount) values ('$uniqueID','0')");
-    $stmt2->execute();
+    $stmt2 = $connection->prepare("INSERT INTO `postviews`(`postID`,`viewCount`) VALUES (?, 0)");
+    $stmt2->bindValue(1, $uniqueID);
 
     if ($stmt->execute()) {
-        $targetDir = "blogUpload/";
-        $targetFile = $targetDir . $imageName;
-        if (move_uploaded_file($_FILES["postImage"]["tmp_name"], $targetFile)) {
-            echo "Success";
+        if ($stmt2->execute()) {
+            $targetDir = "blogUpload/";
+            $targetFile = $targetDir . $imageName;
+            if (move_uploaded_file($_FILES["postImage"]["tmp_name"], $targetFile)) {
+                echo "Success";
+            } else {
+                echo "Error: There was an error uploading the file.";
+            }
         } else {
-            echo "Error: There was an error uploading the file.";
+            echo "Error in Statement 2.";
         }
     } else {
-        echo "Error In Stment ";
+        echo "Error in Statement 1.";
     }
-
 }
-
 ?>

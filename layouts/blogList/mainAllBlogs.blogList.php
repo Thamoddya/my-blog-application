@@ -12,7 +12,7 @@
     $offset = ($pageNumber - 1) * $perPage;
 
     // Prepare the SQL query with the LIMIT and OFFSET clauses
-    $stmt = $connection->prepare("SELECT * FROM allblogs INNER JOIN category ON category.id = allblogs.categoryID INNER JOIN postviews ON postviews.postID = allblogs.postID ORDER BY postviews.viewCount DESC LIMIT :perPage OFFSET :offset");
+    $stmt = $connection->prepare("SELECT * FROM allblogs INNER JOIN category ON category.id = allblogs.categoryID INNER JOIN postviews ON postviews.postID = allblogs.postID ORDER BY allblogs.id DESC LIMIT :perPage OFFSET :offset");
     $stmt->bindValue(":perPage", $perPage, PDO::PARAM_INT);
     $stmt->bindValue(":offset", $offset, PDO::PARAM_INT);
     $stmt->execute();
@@ -40,7 +40,7 @@
                             ?>
                         </span>
                         <span class="meta-item">
-                            <i class="fal fa-comment"></i>
+                            <i class="fal fa-eye"></i>
                             <?php echo $AllBlogData['viewCount'] ?>
                         </span>
                         <span class="meta-item">
