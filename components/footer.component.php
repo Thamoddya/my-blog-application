@@ -34,14 +34,14 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-6">
-                        <img src="assets/img/knowladge addict logo.png">
+                        <img src="assets/img/knowladge addict logo.png" alt="Knowledge Addict">
                         </div>
                         <div class="col-6">
-                        <img src="assets/img/java institutelogo-black.png" >
+                        <img src="assets/img/java institutelogo-black.png" alt="Java Institute">
                         </div>
                     </div>
                     
-              
+
                 </div>
                 
             </div>
