@@ -18,6 +18,7 @@ $PageName = "Blog Home ";
     include_once "./components/head.imports.php";
     include_once "./components/viewTraffic.component.php";
     ?>
+    <meta name="google-site-verification" content="xjDaOK72B7__BGgPeOYLYgc70RH54o2xUUcL7bV7BxY" />
 </head>
 
 <body>
