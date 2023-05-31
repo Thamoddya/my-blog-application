@@ -30,7 +30,7 @@ for ($recentPost2 = 0; $recentPost2 < $stmt->rowCount(); $recentPost2++) {
                         ?>
                     </span>
                     <span class="meta-item">
-                        <i class="fal fa-share-alt"></i>
+                        <i class="fa fa-share-alt"></i>
                     </span>
                 </div>
                 <a href="blog-list.php">
