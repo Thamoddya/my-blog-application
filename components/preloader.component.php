@@ -33,7 +33,7 @@
         </svg>
       </li>
     </ul>
-  </div><span>Loading</span></div>
+  </div><span>Loading...</span></div>
 </div>
 <!-- SCROLL TO TOP -->
 <div class="progress-wrap">
