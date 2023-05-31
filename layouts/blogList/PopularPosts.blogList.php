@@ -26,7 +26,7 @@ for ($PreviewmostUpdatedPostRow = 0; $PreviewmostUpdatedPostRow < $stmt->rowCoun
                 ?>
                 </span>
                 <span class="meta-item comment">
-                    <i class="fal fa-eye"></i>
+                    <i class="fa fa-eye"></i>
                     <?php echo $PreviewmostUpdatedPostData['viewCount'] ?>
                 </span>
             </div>

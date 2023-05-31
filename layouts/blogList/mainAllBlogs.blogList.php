@@ -40,7 +40,7 @@
                             ?>
                         </span>
                         <span class="meta-item">
-                            <i class="fal fa-eye"></i>
+                            <i class="fa fa-eye"></i>
                             <?php echo $AllBlogData['viewCount'] ?>
                         </span>
                         <span class="meta-item">

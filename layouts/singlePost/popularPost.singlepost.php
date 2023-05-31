@@ -26,7 +26,7 @@ for ($PreviewmostUpdatedPostRowInSinglePost = 0; $PreviewmostUpdatedPostRowInSin
                 ?>
                 </span>
                 <span class="meta-item comment">
-                    <i class="fal fa-eye"></i>
+                    <i class="fa fa-eye"></i>
                     <?php echo $PreviewmostUpdatedPostDataInSingleArea['viewCount'] ?>
                 </span>
             </div>

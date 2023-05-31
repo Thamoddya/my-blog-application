@@ -23,7 +23,7 @@ for ($recentPost1 = 0; $recentPost1 < $stmt->rowCount(); $recentPost1++) {
                     ?>
                 </span>
                 <span class="meta-item">
-                    <i class="fal fa-eye"></i>
+                    <i class="fa fa-eye"></i>
                     <?php echo $recentPost_1_Data['viewCount'] ?>
                 </span>
             </div>

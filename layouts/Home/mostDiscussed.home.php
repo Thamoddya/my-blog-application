@@ -29,7 +29,7 @@ for ($mostUpdatedPostRow = 0; $mostUpdatedPostRow < $stmt->rowCount(); $mostUpda
                         ?>
                     </span>
                     <span class="meta-item comment">
-                        <i class="fal fa-eye"></i>
+                        <i class="fa fa-eye"></i>
                         <?php echo $mostUpdatedPostData['viewCount'] ?>
                     </span>
                 </div>
