@@ -28,7 +28,7 @@ for ($categoryDataRows = 0; $categoryDataRows < $stmt->rowCount(); $categoryData
             </p>
             <div class="button cat-button">
                 <span>
-                    <i class="fal fa-chevron-right"></i>
+                    <i class="fa fa-chevron-right"></i>
                 </span>
             </div>
         </div>
