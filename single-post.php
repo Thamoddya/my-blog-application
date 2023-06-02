@@ -102,7 +102,7 @@ $PageName = $allPostData['postTitle'];
                                         ?>
                                     </span>
                                     <span class="meta-item">
-                                        <i class="fal fa-eye"></i>
+                                        <i class="fa fa-eye"></i>
                                         <?php echo $allPostData['viewCount'] ?>
                                     </span>
                                     <span class="meta-item">
