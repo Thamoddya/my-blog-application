@@ -24,6 +24,7 @@ if (empty($_POST['email'])) {
         $stmt->execute();
 
         $rowCount = $stmt->rowCount();
+        
         if ($rowCount == '1') {
             $response = array(
                 'success' => 'true',

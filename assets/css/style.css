@@ -1893,6 +1893,7 @@ p {
   height: 50px;
   width: 50px;
   cursor: pointer;
+  background-color: transparent;
   display: block;
   border-radius: 50px;
   -webkit-box-shadow: inset 0 0 0 2px #999;
@@ -1904,6 +1905,7 @@ p {
   transform: translateY(15px);
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
+  
 }
 
 @media (max-width: 575px) {
@@ -1929,7 +1931,7 @@ p {
   text-align: center;
   line-height: 50px;
   font-size: 26px;
-  color: #177ef7;
+  color: transparent;
   left: 0;
   top: 0;
   height: 50px;
@@ -1957,15 +1959,17 @@ p {
 
 .progress-wrap svg path {
   fill: none;
+  
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #177ef7;
+  stroke: #f717a1;
   stroke-width: 4;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
+  
 }
 
 @-webkit-keyframes playVideo {

@@ -23,7 +23,7 @@ $stmt->execute();
                             <div class="post-card">
                                 <span class="category"> <?php echo $gotDataForheader['tagName'] ?> </span>
                                 <p class="body-text">
-                                    <?php echo $gotDataForheader['displayData'] ?>
+                                    <?php echo substr($gotDataForheader['displayData'], 0, 100); ?>...
                                 </p>
                                 <div class="post-meta-wrapper">
                                     <div class="meta-left">

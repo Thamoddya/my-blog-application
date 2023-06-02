@@ -43,7 +43,7 @@
             <div class="mobile-nav-wrap">
                 <div class="mobile-nav">
                     <button type="button" class="close-nav">
-                        <i class="fal fa-times-circle"></i>
+                        <i class="fa fa-times-circle"></i>
                     </button>
                     <nav class="sidebar-nav">
                         <ul class="metismenu" id="mobile-menu">
@@ -62,8 +62,8 @@
                     </nav>
 
                     <div class="action-bar">
-                        <a href="thamoddya.working@gmail.com"><i class="fal fa-envelope"></i>thamoddya.working@gmail.com</a>
-                        <a href="tel:123-456-7890"><i class="fal fa-phone"></i>+94 76 945 8554</a>
+                        <a href="thamoddya.working@gmail.com"><i class="fa fa-envelope"></i>thamoddya.working@gmail.com</a>
+                        <a href="tel:123-456-7890"><i class="fa fa-phone"></i>+94 76 945 8554</a>
                         <div class="social-icons d-flex">
                             <a href="https://web.facebook.com/Thamoddya">
                                 <i class="fab fa-facebook-f"></i>
