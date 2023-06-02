@@ -10,6 +10,5 @@
 
  <!-- ============= MAIN CSS ============= -->
  <link rel="stylesheet" href="assets/css/style.css" />
- <link rel="stylesheet" href="assets/css/vendors/icons.css" />
  <link rel="stylesheet" href="assets/css/vendors/slick-theme.css" />
  <script src="https://kit.fontawesome.com/3840ac106f.js" crossorigin="anonymous"></script>

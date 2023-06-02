@@ -10,7 +10,7 @@ $PageName = "Knowledge Addict - LOGIN";
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thamoddya Rashmitha - <?php echo $PageName ?></title>
+    <title><?php echo $PageName ?></title>
     <meta name="description" content="Thamoddya Rashmitha Blog - Knowledge Addict">
     <meta name="keywords" content="Thamoddya, Rashmitha, Blog, Science Blog, Technology Blog, Java Institute,Latest Post,Blog Post,Knowledge Addict">
 
@@ -21,6 +21,9 @@ $PageName = "Knowledge Addict - LOGIN";
 </head>
 
 <body>
+<?php
+    include_once "./components/preloader.component.php";
+    ?>
 
     <div class="container-fluid">
         <div class="row">
@@ -36,8 +39,7 @@ $PageName = "Knowledge Addict - LOGIN";
                                         </div>
                                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                             <div class="card-body p-4 p-lg-5 text-black">
-
-                                                <form>
+                                                <div>
 
                                                     <div class="d-flex align-items-center mb-3 pb-1">
                                                         <img src="./assets/img/knowladge addict logo.png" alt="Knowledge Addict" style="width: 20%;">
@@ -56,13 +58,31 @@ $PageName = "Knowledge Addict - LOGIN";
                                                     </div>
 
                                                     <div class="pt-1 mb-4">
-                                                        <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+
+                                                        <button class="continue-application" onclick="adminValidate();" id="validateButton">
+                                                            <div>
+                                                                <div class="pencil"></div>
+                                                                <div class="folder">
+                                                                    <div class="top">
+                                                                        <svg viewBox="0 0 24 27">
+                                                                            <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="paper"></div>
+                                                                </div>
+                                                            </div>
+                                                            Continue Login
+                                                        </button>
+                                                        <button class="btn d-none" id="validateLoader">
+                                                            <div class="spinner-grow text-primary" role="status">
+                                                                <span class="visually-hidden">Loading...</span>
+                                                            </div>
+                                                        </button>
                                                     </div>
 
                                                     <a class="small text-muted" href="./contact.php">Forgot password?</a>
-                                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!" style="color: #393f81;">Contact Admin</a></p>
-                                                </form>
-
+                                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="./contact.php" style="color: #393f81;">Contact Admin</a></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -80,6 +100,44 @@ $PageName = "Knowledge Addict - LOGIN";
     include_once "./components/body.imports.php";
     ?>
 
+    <script>
+        function adminValidate() {
+
+            var email = $("#userEmail").val();
+            var password = $("#userPassword").val();
+
+            if (email.trim() === '' || password.trim() === '') {
+                $('#userEmail').addClass('border border-danger');
+                $('#userPassword').addClass('border border-danger');
+                return;
+            }
+
+            $('#validateButton').addClass('d-none');
+            $('#validateLoader').removeClass('d-none');
+
+            $.ajax({
+                url: "process/writerReg.process.php",
+                method: "POST",
+                data: {
+                    email: email,
+                    password: password
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response === "success") {
+                        window.location.href ='./writer/index.writer.php';
+
+                    } else {
+                        $('#validateLoader').addClass('d-none');
+                        $('#validateButton').removeClass('d-none');
+                    }
+                },
+                error: function() {
+                    console.log("An error occurred during the login process.");
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
