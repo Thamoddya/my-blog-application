@@ -58,7 +58,7 @@
                                 <?php echo $AllBlogData['displayData'] ?>
                             </p>
                         </div>
-                        <a href="single-post.php?postID=<?php echo $AllBlogData['postID'] ?>" class="button icon-button">
+                        <a href="single-post.php?postID=<?php echo $AllBlogData['postID'] ?>,search=<?php echo $AllBlogData['postTitle'] ?>" class="button icon-button">
                             <span class="icon">
                                 <i class="fas fa-chevron-right"></i>
                             </span>

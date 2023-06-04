@@ -34,7 +34,7 @@ for ($latesyTopicRows = 0; $latesyTopicRows < $stmt->rowCount(); $latesyTopicRow
                 </span>
             </div>
 
-            <a href="single-post.php?postID=<?php echo $gotDataForheader['postID'] ?>" class="button icon-button">
+            <a href="single-post.php?postID=<?php echo $gotDataForheader['postID'] ?>,search=<?php echo $gotDataForheader['postTitle'] ?>" class="button icon-button">
 
                 <span class="icon">
                     <i class="fas fa-chevron-right"></i>

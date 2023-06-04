@@ -126,7 +126,6 @@ $PageName = "Knowledge Addict - LOGIN";
                     console.log(response);
                     if (response === "success") {
                         window.location.href ='./writer/index.writer.php';
-
                     } else {
                         $('#validateLoader').addClass('d-none');
                         $('#validateButton').removeClass('d-none');

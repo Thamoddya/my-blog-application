@@ -38,7 +38,7 @@ $stmt->execute();
                                             <?php echo $gotDataForheader['viewCount'] ?>
                                         </span>
                                     </div>
-                                    <a href="single-post.php?postID=<?php echo $gotDataForheader['postID'] ?>" class="button post-button">
+                                    <a href="single-post.php?postID=<?php echo $gotDataForheader['postID'] ?>,search=<?php echo $gotDataForheader['postTitle'] ?>" class="button post-button">
                                         <span class="icon">
                                             <img src="assets/img/icons/long-arrow.png" alt="arrow" />
                                         </span>
