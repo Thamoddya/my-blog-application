@@ -64,13 +64,18 @@ include_once "../connection.php";
             <?php
             include_once "./screens/sendNotifyEmail.screen.php";
             ?>
+             <?php
+    include_once "./screens/sendOtherEMil.screen.php";
+    ?>
         </div>
 
     </div>
 
+
     <?php
     include_once "./includes/adminBody.include.php";
     ?>
+   
 
 </body>
 

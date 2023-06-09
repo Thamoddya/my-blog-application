@@ -224,3 +224,38 @@ const sendEmail = () => {
         }
     });
 }
+const sendHTMLEMAIL = () => {
+
+    $('#notifyEmailButton1').addClass('d-none');
+    $('#notifyEmailLoader1').removeClass('d-none');
+
+    let postDate = $("#gotHTML").val();
+
+    const formData = new FormData();
+    formData.append('postDataHTML', postDate);
+
+
+    $.ajax({
+        url: './validations/sendEMailHTML.validate.php',
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            console.log(response);
+            if (response == 'Success') {
+                $('#notifyEmailLoader1').addClass('d-none');
+                $('#notifyEmailButton1').removeClass('d-none');
+                $('#notifyEmailButton1').html('Upload Successful');
+                $('#notifyEmailButton1').prop('disabled', true);
+            } else {
+                $('#notifyEmailButton1').removeClass('d-none');
+                $('#notifyEmailButton1').html('Error Uploading');
+                $('#notifyEmailLoader1').addClass('d-none');
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error: " + xhr.status);
+        }
+    });
+}
