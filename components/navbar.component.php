@@ -10,7 +10,7 @@
                     <img src="assets/img/newlog-logo.png" alt="Newlog" />
                 </a>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav ">
                 <ul class="navmenu-items">
                     <li class="navmenu-item"><a href="index.php" class="navmenu-link">Home</a></li>
                     <li class="navmenu-item"><a href="index.php" class="navmenu-link">Technology</a></li>
@@ -46,7 +46,7 @@
                     <button type="button" class="close-nav">
                         <i class="fa fa-times-circle"></i>
                     </button>
-                    <nav class="sidebar-nav">
+                    <nav class="sidebar-nav ">
                         <ul class="metismenu" id="mobile-menu">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="index.php">Technology</a></li>

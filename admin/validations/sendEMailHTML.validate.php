@@ -10,8 +10,6 @@ require '../../include/SMTP.php';
 
 $postDataHTML = $_POST['postDataHTML'];
 
-
-
 include_once "../../connection.php";
 
 // Retrieve email addresses from the database

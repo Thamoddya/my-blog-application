@@ -234,7 +234,6 @@ const sendHTMLEMAIL = () => {
     const formData = new FormData();
     formData.append('postDataHTML', postDate);
 
-
     $.ajax({
         url: './validations/sendEMailHTML.validate.php',
         type: "POST",

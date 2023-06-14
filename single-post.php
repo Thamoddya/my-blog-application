@@ -106,7 +106,7 @@ $PageName = $allPostData['postTitle'];
                                         <?php echo $allPostData['viewCount'] ?>
                                     </span>
                                     <span class="meta-item">
-                                        <i class="fal fa-share"></i>
+                                        <i class="fa fa-share"></i>
                                     </span>
                                 </div>
                                 <div class="post-content">
@@ -213,7 +213,6 @@ $PageName = $allPostData['postTitle'];
 
                                 if ($getTagNamesForPost->rowCount() > 0) {
 
-
                                     for ($tagcount = 0; $tagcount < $getTagNamesForPost->rowCount(); $tagcount++) {
                                         $PostTagData = $getTagNamesForPost->fetch();
 
@@ -228,9 +227,6 @@ $PageName = $allPostData['postTitle'];
                                 ?>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
                 <div class="col-lg-3">

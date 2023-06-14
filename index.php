@@ -64,14 +64,17 @@ $PageName = "Blog Home ";
         <div class="row">
             <div class="col-12">
                 <div class="row">
-                    <div class="col-md-4 offset-md-4 overflow-x-hidden">
+                    <div class="col-md-4 overflow-x-hidden">
                         <?php
                         include_once "./components/newsletter.component.php";
                         ?>
                     </div>
+                    <div class="col-md-8 overflow-x-hidden">
+                        <div class="containerData mt-3 mt-md-0 mb-3 mb-md-0">
+                            <h2 class="text text-center"></h2>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
         </div>
     </div>

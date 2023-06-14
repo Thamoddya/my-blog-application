@@ -1,4 +1,5 @@
  <!-- ============= FAVICON ICON ============= -->
+ <script src="https://kit.fontawesome.com/3840ac106f.js" crossorigin="anonymous"></script>
  <link rel="shortcut icon" href="assets/img/favicon.ico" />
  <!-- ============= VENDORS CSS ============= -->
 
@@ -11,4 +12,3 @@
  <!-- ============= MAIN CSS ============= -->
  <link rel="stylesheet" href="assets/css/style.css" />
  <link rel="stylesheet" href="assets/css/vendors/slick-theme.css" />
- <script src="https://kit.fontawesome.com/3840ac106f.js" crossorigin="anonymous"></script>
